@@ -1,0 +1,44 @@
+import { ArrowRight } from "lucide-react";
+
+export default function HeroSection() {
+  return (
+    <section className="w-full">
+      <div className="grid min-h-175 grid-cols-1 overflow-hidden rounded-4xl bg-[#f5f1f3] lg:grid-cols-[1.05fr_1fr]">
+        <div className="relative min-h-105 lg:min-h-175">
+          <img
+            src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1400&q=80"
+            alt="Professional drone flying in the sky"
+            className="h-full w-full object-cover"
+          />
+        </div>
+
+        <div className="flex flex-col justify-between px-8 py-12 sm:px-14 lg:px-16 lg:py-16">
+          <div className="max-w-140">
+            <h1 className="max-w-130 text-5xl font-black leading-[0.95] tracking-tight text-black sm:text-6xl lg:text-7xl">
+              Fly Into The Future
+            </h1>
+
+            <p className="mt-8 max-w-140 text-base font-semibold leading-8 text-neutral-500 sm:text-lg">
+              Discover next-generation drones built for creators, explorers,
+              and professionals. Capture cinematic aerial footage, navigate with
+              precision, and elevate every flight with intelligent performance.
+            </p>
+
+            <button className="mt-10 inline-flex items-center gap-4 rounded-full bg-[#d7bcc8] px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90">
+              <span>Get Started</span>
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
+                <ArrowRight size={18} />
+              </span>
+            </button>
+          </div>
+
+          <div className="mt-16 flex items-center gap-5">
+            <span className="text-6xl font-black leading-none text-black">1</span>
+            <div className="h-9 w-px bg-neutral-300" />
+            <span className="text-2xl font-extrabold text-black">World Leader</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
