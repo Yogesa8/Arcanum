@@ -1,8 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, MapPin, Phone, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Mail, MapPin, Phone, Menu } from "lucide-react";
+
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 
 const navLinks = [
   { label: "Drones", href: "#" },
@@ -12,12 +21,9 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
-
   return (
-    <header className="w-full relative">
+    <header className="w-full">
       <div className="mx-auto flex max-w-450 items-center justify-between rounded-full bg-white px-6 py-4 shadow-sm">
-        
         {/* LEFT */}
         <div className="flex items-center gap-4 sm:gap-10">
           <Link href="/" className="flex items-center gap-3">
@@ -47,75 +53,63 @@ export default function Header() {
           </nav>
         </div>
 
-        {/* RIGHT */}
+        {/* RIGHT DESKTOP */}
         <div className="hidden md:flex items-center gap-5">
           <Phone size={18} />
           <Mail size={18} />
           <MapPin size={18} />
 
-          <button className="rounded-full bg-[#d7bcc8] px-6 py-2 text-sm font-semibold text-white">
+          <button className="rounded-full bg-[#d7bcc8] px-8 py-3 text-sm font-semibold text-white">
             Shop Now
           </button>
         </div>
 
-        {/* MOBILE MENU BUTTON */}
-        <button
-          onClick={() => setOpen(true)}
-          className="md:hidden text-slate-900"
-        >
-          <Menu size={26} />
-        </button>
-      </div>
-
-      {/* MOBILE DRAWER */}
-      {open && (
-        <div className="fixed inset-0 z-50">
-          
-          {/* OVERLAY */}
-          <div
-            className="absolute inset-0 bg-black/40"
-            onClick={() => setOpen(false)}
-          />
-
-          {/* SIDEBAR */}
-          <div className="absolute right-0 top-0 h-full w-65 bg-white p-6 shadow-lg flex flex-col">
-            
-            {/* CLOSE */}
-            <div className="flex justify-end">
-              <button onClick={() => setOpen(false)}>
-                <X size={24} />
+        {/* MOBILE DRAWER */}
+        <div className="md:hidden">
+          <Drawer>
+            <DrawerTrigger asChild>
+              <button>
+                <Menu size={26} />
               </button>
-            </div>
+            </DrawerTrigger>
 
-            {/* NAV LINKS */}
-            <nav className="mt-8 flex flex-col gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="text-lg font-semibold text-slate-900"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+            <DrawerContent className="p-6">
+              <DrawerHeader>
+                <DrawerTitle>Menu</DrawerTitle>
+              </DrawerHeader>
 
-            {/* CONTACT + CTA */}
-            <div className="mt-auto flex flex-col gap-5 pt-10">
-              <div className="flex gap-4 text-slate-700">
-                <Phone size={18} />
-                <Mail size={18} />
-                <MapPin size={18} />
-              </div>
+              {/* NAV LINKS */}
+              <nav className="mt-6 flex flex-col gap-5">
+                {navLinks.map((link) => (
+                  <DrawerClose asChild key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-lg font-semibold text-slate-900"
+                    >
+                      {link.label}
+                    </Link>
+                  </DrawerClose>
+                ))}
+              </nav>
 
-              <button className="rounded-full bg-[#d7bcc8] px-6 py-3 text-sm font-semibold text-white">
-                Shop Now
-              </button>
-            </div>
-          </div>
+              {/* FOOTER */}
+              <DrawerFooter className="mt-10">
+                <div className="flex gap-4 text-slate-700 justify-center">
+                  <Phone size={18} />
+                  <Mail size={18} />
+                  <MapPin size={18} />
+                </div>
+
+                <DrawerClose asChild>
+                  <button className="mt-6 w-full rounded-full bg-[#d7bcc8] px-6 py-3 text-sm font-semibold text-white">
+                    Shop Now
+                  </button>
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
         </div>
-      )}
+      </div>
     </header>
   );
 }
