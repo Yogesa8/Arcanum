@@ -1,0 +1,114 @@
+"use client";
+import { useState } from "react";
+import Image from "next/image";
+
+// Data Configuration for the features
+const featuresData = [
+  {
+    id: 1,
+    title: "Superior Stability",
+    shortDesc: "Advanced gimbal technology.",
+    fullDesc:
+      "Capture steady footage even in high winds with our 3-axis stabilization system.",
+    img: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: 2,
+    title: "Next Gen Camera",
+    shortDesc: "8K resolution recording.",
+    fullDesc:
+      "Professional-grade sensor captures every detail with stunning dynamic range.",
+    img: "https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: 3,
+    title: "Intuitive Controls",
+    shortDesc: "Effortless pilot experience.",
+    fullDesc:
+      "Effortless controls for seamless flight, designed for beginners and pros alike.",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: 4,
+    title: "Extended Battery",
+    shortDesc: "Up to 45 mins flight.",
+    fullDesc:
+      "Industry-leading battery life keeps you in the air longer for the perfect shot.",
+    img: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=800&q=80",
+  },
+];
+
+export default function KeyFeaturesSection() {
+  const [activeFeature, setActiveFeature] = useState(featuresData[0]);
+  return (
+    <section className="bg-[#f5f5f5] py-14 md:py-24">
+      <div className="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row gap-10 md:gap-20">
+
+        {/* LEFT */}
+        <div className="w-full md:w-[35%]">
+
+          <span className="inline-block px-4 py-1 text-xs font-semibold border border-gray-300 rounded-full mb-5">
+            Key Features
+          </span>
+
+          <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8 md:mb-12">
+            Unmatched <br />
+            Performance <br />
+            Ahead
+          </h2>
+
+          {/* menu */}
+          <div className="border-t border-gray-300">
+            {featuresData.map((feature) => (
+              <button
+                key={feature.id}
+                onClick={() => setActiveFeature(feature)}
+                className={`w-full text-left py-4 md:py-6 text-lg md:text-2xl border-b border-gray-300 transition
+                ${activeFeature.id === feature.id
+                    ? "text-black"
+                    : "text-gray-400 hover:text-gray-600"
+                  }`}
+              >
+                {feature.title}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* RIGHT SIDE */}
+        <div className="w-full md:w-[55%]">
+          {/* image box */}
+          <div className="relative w-full h-70  md:h-105 overflow-hidden ">
+            <Image
+              key={activeFeature.id}
+              src={activeFeature.img}
+              alt={activeFeature.title}
+              fill
+              className="object-cover rounded-[20px]"
+            />
+            <div
+              className="absolute bottom-0 left-0 w-28 sm:w-40 md:w-55 h-12 sm:h-14 md:h-15 bg-[#f5f5f5] rounded-tr-[20px] sm:rounded-tr-[30px] z-10
+                  before:content-[''] before:absolute before:-top-4 sm:before:-top-5 before:left-0 before:w-4 sm:before:w-5 before:h-4 sm:before:h-5
+                  before:bg-transparent before:rounded-bl-[20px] sm:before:rounded-bl-[30px] before:shadow-[-8px_8px_0_8px_#f5f5f5] sm:before:shadow-[-10px_10px_0_10px_#f5f5f5]
+
+                  after:content-[''] after:absolute after:bottom-0 after:-right-4 sm:after:-right-5 after:w-4 sm:after:w-5 after:h-4 sm:after:h-5
+                  after:bg-transparent after:rounded-bl-[20px] sm:after:rounded-bl-[30px] after:shadow-[-8px_8px_0_8px_#f5f5f5] sm:after:shadow-[-10px_10px_0_10px_#f5f5f5]
+                "
+            ></div>
+          </div>
+
+          {/* TEXT */}
+          <div className="mt-6 md:mt-10">
+            <h3 className="text-2xl md:text-3xl font-semibold mb-2">
+              {activeFeature.title}
+            </h3>
+
+            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+              {activeFeature.fullDesc}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

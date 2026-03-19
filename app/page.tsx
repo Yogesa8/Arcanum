@@ -1,6 +1,9 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/Hero";
 import "./globals.css"
+import FeatureCarousel from "@/components/FeatureCarousel";
+import KeyFeaturesSection from "@/components/KeyFeatures";
+import ClientVoices from "@/components/ClientVoices";
 
 
 export default function Home() {
@@ -10,6 +13,9 @@ export default function Home() {
         <Header />
         <div className="mt-3">
           <HeroSection />
+          <FeatureCarousel/>
+          <ClientVoices />
+          <KeyFeaturesSection/>
         </div>
       </div>
     </main>
