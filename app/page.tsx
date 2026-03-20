@@ -4,6 +4,9 @@ import "./globals.css"
 import FeatureCarousel from "@/components/FeatureCarousel";
 import KeyFeaturesSection from "@/components/KeyFeatures";
 import ClientVoices from "@/components/ClientVoices";
+import TeamSection from "@/components/TeamSection";
+import DronePartsSection from "@/components/DronePartsSection";
+import ContactSection from "@/components/ContactSection";
 
 
 export default function Home() {
@@ -16,6 +19,9 @@ export default function Home() {
           <FeatureCarousel/>
           <ClientVoices />
           <KeyFeaturesSection/>
+          <TeamSection/>
+          <DronePartsSection/>
+          <ContactSection/>
         </div>
       </div>
     </main>

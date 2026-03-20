@@ -28,12 +28,12 @@ const testimonials = [
 
 function QuoteBadge() {
   return (
-    <div className="absolute right-0 top-0 z-20 h-[60px] w-[60px] rounded-bl-[30px] bg-[#fdf9fa] pl-[10px] pb-[10px]">
+    <div className="absolute right-0 top-0 z-20 h-15 w-15 rounded-bl-[30px] bg-[#fdf9fa] pl-2.5 pb-2.5">
       <div className="flex h-full w-full items-center justify-center rounded-full bg-[#d6b5c8] text-black">
-        <Quote className="h-5 w-5 fill-current stroke-[2]" />
+        <Quote className="h-5 w-5 fill-current stroke-2" />
       </div>
-      <div className="absolute left-[-20px] top-0 h-[20px] w-[20px] rounded-tr-[30px] bg-transparent shadow-[10px_-10px_0_10px_#fdf9fa]" />
-      <div className="absolute right-0 top-[60px] h-[20px] w-[20px] rounded-tr-[30px] bg-transparent shadow-[10px_-10px_0_10px_#fdf9fa]" />
+      <div className="absolute -left-5 top-0 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[10px_-10px_0_10px_#fdf9fa]" />
+      <div className="absolute right-0 top-15 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[10px_-10px_0_10px_#fdf9fa]" />
     </div>
   );
 }
@@ -41,23 +41,23 @@ function QuoteBadge() {
 export default function ClientVoices() {
   return (
     <section className="bg-[#fdf9fa] px-5 py-20 sm:px-8 md:px-10 md:py-24 lg:px-16 lg:py-28">
-      <div className="mx-auto max-w-[1320px]">
+      <div className="mx-auto max-w-330">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
-          <div className="max-w-[620px]">
+          <div className="max-w-155">
             <span className="inline-flex rounded-full border border-[#d8b6c8] px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black">
               Client Voices
             </span>
-            <h2 className="mt-8 max-w-[540px] text-5xl font-extrabold leading-[0.95] tracking-[-0.06em] text-black sm:text-6xl md:text-[88px]">
+            <h2 className="mt-8 max-w-135 text-5xl font-extrabold leading-[0.95] tracking-[-0.06em] text-black sm:text-6xl md:text-[88px]">
               What They Say
             </h2>
           </div>
 
           <a
             href="#"
-            className="inline-flex h-[62px] w-fit items-center rounded-full bg-[#d3b0c3] p-1 text-base font-bold text-white shadow-sm transition-transform duration-200 hover:scale-[1.02] self-start lg:mt-[74px]"
+            className="inline-flex h-15.5 w-fit items-center rounded-full bg-[#d3b0c3] p-1 text-base font-bold text-white shadow-sm transition-transform duration-200 hover:scale-[1.02] self-start lg:mt-18.5"
           >
             <span className="px-7">See More</span>
-            <span className="flex h-[54px] w-[54px] items-center justify-center rounded-full bg-white text-black">
+            <span className="flex h-13.5 w-13.5 items-center justify-center rounded-full bg-white text-black">
               <ArrowRight className="h-5 w-5" />
             </span>
           </a>
@@ -67,7 +67,7 @@ export default function ClientVoices() {
           {testimonials.map((item) => (
             <article key={item.name} className="rounded-[30px_0px_30px_30px] bg-[#fffdfd] shadow-[0_18px_60px_rgba(185,162,171,0.08)]">            
               <div className="relative">
-                <div className="relative h-[260px] overflow-hidden rounded-[30px] md:h-[280px]">
+                <div className="relative h-65 overflow-hidden rounded-[30px] md:h-70">
                   <Image
                     src={item.image}
                     alt={item.name}
