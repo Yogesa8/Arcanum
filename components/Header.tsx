@@ -24,7 +24,7 @@ const navLinks = [
 export default function Header() {
   return (
     <header className="absolute z-20 w-full px-5 pt-5 sm:px-8 md:px-10">
-      <div className="mx-auto w-full max-w-7xl flex items-center justify-between rounded-full bg-white px-6 py-4 shadow-sm">
+      <div className="mx-auto w-full flex items-center justify-between rounded-full bg-white px-6 py-4 shadow-sm">
         {/* LEFT */}
         <div className="flex items-center gap-4 sm:gap-10">
           <Link href="/" className="flex items-center gap-3">

@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import img1 from "../public/feature/img1.png"
+import img1 from "../public/feature/img1.jpeg"
 import img2 from "../public/feature/img2.png"
 import img3 from "../public/feature/img3.jpg"
 import img4 from "../public/feature/img4.jpg"
