@@ -2,47 +2,55 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import img1 from "../public/feature/img1.png"
+import img2 from "../public/feature/img2.png"
+import img3 from "../public/feature/img3.jpg"
+import img4 from "../public/feature/img4.jpg"
+import img5 from "../public/feature/img5.jpg"
+import img6 from "../public/feature/img6.jpg"
+import img7 from "../public/feature/img7.jpg"
+import img8 from "../public/feature/img8.jpg"
 
 const cards = [
   {
     title: "Bildkvalitet",
     desc: "Kristallklar bild som får dig att glömma att du sitter hemma. Som att vara där på riktigt!",
-    img: "https://images.unsplash.com/photo-1508615070457-7baeba4003ab?auto=format&fit=crop&q=80",
+    img: img1,
   },
   {
     title: "Ljudet",
     desc: "Immersivt ljud som omsluter dig. Känn varje explosion och viskning.",
-    img: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80",
+    img: img2,
   },
   {
     title: "Enkelhet",
     desc: "Plug and play. Inga krångliga inställningar, bara ren underhållning.",
-    img: "https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?auto=format&fit=crop&q=80",
+    img: img3,
   },
   {
     title: "Design",
     desc: "Snygga projektorer som passar in i ditt hem. Teknik som är lika vacker som funktionell.",
-    img: "https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&q=80",
+    img: img4,
   },
   {
     title: "Bildkvalitet",
     desc: "Kristallklar bild som får dig att glömma att du sitter hemma. Som att vara där på riktigt!",
-    img: "https://images.unsplash.com/photo-1508615070457-7baeba4003ab?auto=format&fit=crop&q=80",
+    img: img5,
   },
   {
     title: "Ljudet",
     desc: "Immersivt ljud som omsluter dig. Känn varje explosion och viskning.",
-    img: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80",
+    img: img6,
   },
   {
     title: "Enkelhet",
     desc: "Plug and play. Inga krångliga inställningar, bara ren underhållning.",
-    img: "https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?auto=format&fit=crop&q=80",
+    img: img7,
   },
   {
     title: "Design",
     desc: "Snygga projektorer som passar in i ditt hem. Teknik som är lika vacker som funktionell.",
-    img: "https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&q=80",
+    img: img8,
   },
 ];
 
