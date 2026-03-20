@@ -96,7 +96,7 @@ export default function FeatureCarousel() {
       {/* Cards container */}
       <div
         ref={scrollRef}
-        className="h-130 flex gap-8 md:gap-10 overflow-x-auto py-6 px-6 md:px-16 lg:px-20 scroll-smooth snap-x snap-mandatory no-scrollbar " >
+        className="h-120 md:h-140 lg:h-162.5 flex gap-8 md:gap-10 overflow-x-auto py-6 px-6 md:px-16 lg:px-20 scroll-smooth snap-x snap-mandatory no-scrollbar " >
         {cards.map((card, i) => (
           <div
             key={i}

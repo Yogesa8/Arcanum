@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="w-full h-screen">
-      <div className="h-full grid min-h-175 grid-cols-1 overflow-hidden rounded-4xl bg-[#f5f1f3] lg:grid-cols-[1.05fr_1fr]">
+    <section className="flex min-h-screen w-full px-5 pb-5 pt-24 sm:px-8 sm:pb-8 md:px-10 md:pt-28 lg:px-14">
+      <div className="mx-auto grid h-full min-h-[calc(100vh-7.5rem)] w-full max-w-[1720px] grid-cols-1 overflow-hidden rounded-4xl bg-[#f5f1f3] lg:min-h-[calc(100vh-8.5rem)] lg:grid-cols-[1.05fr_1fr]">
         <div className="relative min-h-105 lg:min-h-175">
           <Image
             src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1400&q=80"
@@ -15,7 +15,7 @@ export default function HeroSection() {
         </div>
 
         <div className="flex flex-col justify-between px-8 py-12 sm:px-14 lg:px-16 lg:py-16">
-          <div className="border mt-10 max-w-140">
+          <div className="mt-10 max-w-140">
             <h1 className="max-w-130 text-5xl font-black leading-[0.95] tracking-tight text-black sm:text-6xl lg:text-7xl">
               Fly Into The Future
             </h1>

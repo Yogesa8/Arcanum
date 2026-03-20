@@ -58,7 +58,7 @@ export default function TeamSection() {
 
 
 
-                <div className="h-162.5 mt-10 overflow-x-hidden overflow-y-visible md:mt-14" ref={emblaRef}>
+                <div className="h-120 md:h-140 lg:h-162.5 mt-10 overflow-x-hidden overflow-y-visible md:mt-14" ref={emblaRef}>
                     <div className="-ml-4 flex touch-pan-y md:-ml-6 overflow-visible">
                         {team.map((item, index) => (
                             <div

@@ -12,9 +12,9 @@ import ContactSection from "@/components/ContactSection";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f3f3f3] p-2 sm:p-3 lg:p-4">
-      <div className="rounded-[34px] bg-[#f3f3f3]">
+      <div className=" bg-[#f3f3f3] w-auto">
         <Header />
-        <div className="mt-3">
+        <div>
           <HeroSection />
           <FeatureCarousel/>
           <ClientVoices />
