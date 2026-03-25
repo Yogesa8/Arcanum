@@ -23,7 +23,7 @@ const ContactDetails = () => {
           </div>
 
           {/* Right Side - Map */}
-          <div className="w-full h-[400px] rounded-2xl overflow-hidden border border-black/10">
+          <div className="w-full h-100 rounded-2xl overflow-hidden border border-black/10">
             <iframe
               src="https://www.google.com/maps?q=Sector+81+Gurugram&output=embed"
               width="100%"

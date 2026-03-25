@@ -22,13 +22,13 @@ export default function TrustedBy() {
           {logos.map((logo, i) => (
             <div
               key={i}
-              className="w-[45%] sm:w-[30%] md:w-[200px]"
+              className="w-[45%] sm:w-[30%] md:w-50"
             >
               <div
-                className="h-[120px] flex items-center justify-center px-6
+                className="h-30 flex items-center justify-center px-6
                 rounded-3xl border border-black/10
                 transition-all duration-300 ease-in-out
-                hover:bg-[#d1b3c4] hover:scale-[1.03] hover:shadow-sm"
+                hover:bg-[#2b411c] hover:scale-[1.03] hover:shadow-sm"
               >
                 <Image
                   src={logo}
