@@ -41,13 +41,13 @@ const featuresData = [
 export default function KeyFeaturesSection() {
   const [activeFeature, setActiveFeature] = useState(featuresData[0]);
   return (
-    <section className="bg-[#f5f5f5] py-14 md:py-24">
+    <section className="bg-[#f5f5f5] px-5 py-20 sm:px-8 md:px-10 md:py-24 lg:px-16 lg:py-28">
       <div className="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row gap-10 md:gap-20">
 
         {/* LEFT */}
         <div className="w-full md:w-[35%]">
 
-          <span className="inline-block px-4 py-1 text-xs font-semibold border border-gray-300 rounded-full mb-5">
+          <span className="inline-flex rounded-full border border-[#d8b6c8] px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black">
             Key Features
           </span>
 

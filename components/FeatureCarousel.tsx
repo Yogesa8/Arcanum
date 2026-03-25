@@ -2,55 +2,55 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import img1 from "../public/feature/img1.jpeg"
-import img2 from "../public/feature/img2.png"
-import img3 from "../public/feature/img3.jpg"
-import img4 from "../public/feature/img4.jpg"
-import img5 from "../public/feature/img5.jpg"
-import img6 from "../public/feature/img6.jpg"
-import img7 from "../public/feature/img7.jpg"
-import img8 from "../public/feature/img8.jpg"
+import Bildkvalit from "../public/feature/img1.jpeg"
+import Ljudet from "../public/feature/img2.png"
+import Enkelhet from "../public/feature/img3.jpg"
+import Design from "../public/feature/img4.jpg"
+import Bildkvalitet from "../public/feature/img5.jpg"
+import Ljud from "../public/feature/img6.jpg"
+import Enkelh from "../public/feature/img8.jpg"
+import Desig from "../public/feature/img9.jpg"
 
 const cards = [
   {
     title: "Bildkvalitet",
     desc: "Kristallklar bild som får dig att glömma att du sitter hemma. Som att vara där på riktigt!",
-    img: img1,
+    image: Bildkvalit,
   },
   {
     title: "Ljudet",
     desc: "Immersivt ljud som omsluter dig. Känn varje explosion och viskning.",
-    img: img2,
+    image: Ljudet,
   },
   {
     title: "Enkelhet",
     desc: "Plug and play. Inga krångliga inställningar, bara ren underhållning.",
-    img: img3,
+    image: Enkelhet,
   },
   {
     title: "Design",
     desc: "Snygga projektorer som passar in i ditt hem. Teknik som är lika vacker som funktionell.",
-    img: img4,
+    image: Design,
   },
   {
     title: "Bildkvalitet",
     desc: "Kristallklar bild som får dig att glömma att du sitter hemma. Som att vara där på riktigt!",
-    img: img5,
+    image: Bildkvalitet,
   },
   {
     title: "Ljudet",
     desc: "Immersivt ljud som omsluter dig. Känn varje explosion och viskning.",
-    img: img6,
+    image: Ljud,
   },
   {
     title: "Enkelhet",
     desc: "Plug and play. Inga krångliga inställningar, bara ren underhållning.",
-    img: img7,
+    image: Enkelh,
   },
   {
     title: "Design",
     desc: "Snygga projektorer som passar in i ditt hem. Teknik som är lika vacker som funktionell.",
-    img: img8,
+    image: Desig,
   },
 ];
 
@@ -124,7 +124,7 @@ export default function FeatureCarousel() {
           >
             {/* Image - visible by default */}
             <Image
-              src={card.img}
+              src={card.image}
               alt={card.title}
               fill
               className="object-cover brightness-[0.85] transition-all duration-500 group-hover:brightness-100"

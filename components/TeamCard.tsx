@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Quote } from "lucide-react";
 
 interface Props {
   name: string;
@@ -29,14 +29,12 @@ export default function TeamCard({
           <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-black/18 via-black/0 to-transparent" />
         </div>
 
-        <div className="absolute -right-1 -top-1 z-20 h-19 w-19 rounded-bl-[28px] bg-[#fbfaf8]">
-          <span className="absolute -left-5 top-0 h-5 w-5 rounded-tr-[20px] shadow-[10px_-10px_0_10px_#fbfaf8]" />
-          <span className="absolute bottom-5- right-0 h-5 w-5 rounded-tr-[20px] shadow-[10px_-10px_0_10px_#fbfaf8]" />
-          <div
-            className="absolute right-3 top-3 flex h-13 w-13 items-center justify-center rounded-full bg-[#d8bfd0] text-[#20181d] transition-all duration-300 group-hover:scale-105 group-hover:rotate-45 group-hover:bg-[#3d3138] group-hover:text-white"
-          >
+        <div className="absolute right-0 top-0 z-20 h-15 w-15 rounded-bl-[30px] bg-[#fdf9fa] pl-2.5 pb-2.5">
+          <div className="flex h-full w-full items-center justify-center rounded-full bg-[#d6b5c8] text-black transition-all group-hover:rotate-45 group-hover:bg-[#3d3138] group-hover:text-white">
             <ArrowRight size={22} strokeWidth={2.1} />
           </div>
+          <div className="absolute -left-5 top-0 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_#fdf9fa]" />
+          <div className="absolute right-0 top-15 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_#fdf9fa]" />
         </div>
 
         <div

@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="border flex min-h-screen w-full px-5 pb-5 pt-24 sm:px-8 sm:pb-8 md:px-10 md:pt-28 ">
-      <div className="border mx-auto grid h-full min-h-[calc(100vh-7.5rem)] w-full grid-cols-1 overflow-hidden rounded-4xl bg-[#f5f1f3] lg:min-h-[calc(100vh-8.5rem)] lg:grid-cols-[1.05fr_1fr]">
+    <section className=" flex min-h-screen w-full px-5 pb-5 pt-24 sm:px-8 sm:pb-8 md:px-10 md:pt-28 ">
+      <div className=" mx-auto grid h-full min-h-[calc(100vh-7.5rem)] w-full grid-cols-1 overflow-hidden rounded-4xl bg-[#f5f1f3] lg:min-h-[calc(100vh-8.5rem)] lg:grid-cols-[1.05fr_1fr]">
         <div className="relative min-h-105 lg:min-h-175">
           <Image
             src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1400&q=80"
@@ -26,12 +26,21 @@ export default function HeroSection() {
               precision, and elevate every flight with intelligent performance.
             </p>
 
-            <button className="mt-10 inline-flex items-center gap-4 rounded-full bg-[#d7bcc8] px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90">
+            {/* <button className="mt-10 inline-flex items-center gap-4 rounded-full bg-[#d7bcc8] px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90">
               <span>Get Started</span>
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
                 <ArrowRight size={18} />
               </span>
-            </button>
+            </button> */}
+            <a
+              href="#"
+              className="inline-flex h-15.5 w-fit items-center rounded-full bg-[#d3b0c3] p-1 text-base font-bold text-white shadow-sm transition-transform duration-200 self-start lg:mt-18.5"
+            >
+              <span className="px-7">Get Started</span>
+              <span className="flex h-13.5 w-13.5 items-center justify-center rounded-full bg-white text-black">
+                <ArrowRight className="h-5 w-5" />
+              </span>
+            </a>
           </div>
 
           <div className="mt-16 flex items-center gap-5">

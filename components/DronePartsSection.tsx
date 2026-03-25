@@ -1,42 +1,46 @@
 import React from "react";
 import Image from "next/image";
 import { Cpu, Wind, BatteryCharging, Gamepad2 } from "lucide-react";
+import mortor from "../public/parts/mortor.jpg"
+import controller from "../public/parts/controller.jpg"
+import propeller from "../public/parts/propeller.jpg"
+import battery from "../public/parts/battery.jpg"
 
 const features = [
     {
         title: "Motors",
         desc: "High-performance brushless motors designed for stability, efficiency, and longer flight times.",
         icon: Cpu,
-        image: "https://images.unsplash.com/photo-1581091012184-5c9c1c6d9c1b",
+        image: mortor,
     },
     {
         title: "Propellers",
         desc: "Durable and balanced propellers for smoother flights and better control in all conditions.",
         icon: Wind,
-        image: "https://images.unsplash.com/photo-1508614589041-895b88991e3e",
+        image: propeller,
     },
     {
         title: "Batteries",
         desc: "Long-lasting LiPo batteries that deliver consistent power and extended flight duration.",
         icon: BatteryCharging,
-        image: "https://images.unsplash.com/photo-1584270354949-1f2f7c9e5d5f",
+        image: battery,
     },
     {
         title: "Controllers",
         desc: "Advanced flight controllers with precision tuning for both beginners and professionals.",
         icon: Gamepad2,
-        image: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f",
+        image: controller,
     },
 ];
 
 export default function DronePartsSection() {
     return (
-        <section className="bg-[#fbfaf8] py-16 px-6 md:px-16 mb-6">
+        <section className=" bg-[#f5f5f5] px-5 py-20 sm:px-8 md:px-10 md:py-24 lg:px-16 lg:py-28">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
-                <div className="mb-12">
-                    <p className="text-gray-500 mb-2">/ Drone Parts /</p>
-                    <h2 className="inline-block text-black px-4 py-2 text-3xl md:text-5xl font-semibold">
+                <div className="max-w-155">
+                    <p className="inline-flex rounded-full border border-[#d8b6c8] px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black"> Drone Parts </p>
+                    <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8 md:mb-12">
                         Why Choose Our Parts
                     </h2>
                 </div>
@@ -53,7 +57,7 @@ export default function DronePartsSection() {
                                 {/* Image */}
                                 <div className="relative w-full h-40">
                                     <Image
-                                        src={`${item.image}?auto=format&fit=crop&w=500&q=80`}
+                                        src={item.image}
                                         alt={item.title}
                                         fill
                                         className="object-cover"

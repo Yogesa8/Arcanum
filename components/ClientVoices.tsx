@@ -4,7 +4,7 @@ import { ArrowRight, Quote } from "lucide-react";
 const testimonials = [
   {
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1773402232837-aefde7d2c06f?q=80&w=721&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     quote: "Pure joy! This drone takes my shots to new heights.",
     name: "Alex Ryan",
     role: "Photographer",
@@ -32,8 +32,8 @@ function QuoteBadge() {
       <div className="flex h-full w-full items-center justify-center rounded-full bg-[#d6b5c8] text-black">
         <Quote className="h-5 w-5 fill-current stroke-2" />
       </div>
-      <div className="absolute -left-5 top-0 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[10px_-10px_0_10px_#fdf9fa]" />
-      <div className="absolute right-0 top-15 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[10px_-10px_0_10px_#fdf9fa]" />
+      <div className="absolute -left-5 top-0 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_#fdf9fa]" />
+      <div className="absolute right-0 top-15 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_#fdf9fa]" />
     </div>
   );
 }
@@ -47,14 +47,14 @@ export default function ClientVoices() {
             <span className="inline-flex rounded-full border border-[#d8b6c8] px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black">
               Client Voices
             </span>
-            <h2 className="mt-8 max-w-135 text-5xl font-extrabold leading-[0.95] tracking-[-0.06em] text-black sm:text-6xl md:text-[88px]">
+            <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8 md:mb-12">
               What They Say
             </h2>
           </div>
 
           <a
             href="#"
-            className="inline-flex h-15.5 w-fit items-center rounded-full bg-[#d3b0c3] p-1 text-base font-bold text-white shadow-sm transition-transform duration-200 hover:scale-[1.02] self-start lg:mt-18.5"
+            className="inline-flex h-15.5 w-fit items-center rounded-full bg-[#d3b0c3] p-1 text-base font-bold text-white shadow-sm transition-transform duration-200 self-start lg:mt-18.5"
           >
             <span className="px-7">See More</span>
             <span className="flex h-13.5 w-13.5 items-center justify-center rounded-full bg-white text-black">

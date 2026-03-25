@@ -7,21 +7,23 @@ import ClientVoices from "@/components/ClientVoices";
 import TeamSection from "@/components/TeamSection";
 import DronePartsSection from "@/components/DronePartsSection";
 import ContactSection from "@/components/ContactSection";
+import TrustedBy from "@/components/TrustedBy";
 
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#f3f3f3] p-2 sm:p-3 lg:p-4">
+    <main className="min-h-screen bg-[#f3f3f3] p-2 sm:p-3 lg:p-4 ">
       <div className=" bg-[#f3f3f3] w-auto">
         <Header />
         <div>
           <HeroSection />
-          <FeatureCarousel/>
+          <FeatureCarousel />
           <ClientVoices />
           <KeyFeaturesSection/>
           <TeamSection/>
           <DronePartsSection/>
           <ContactSection/>
+          <TrustedBy/>
         </div>
       </div>
     </main>
