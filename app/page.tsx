@@ -8,6 +8,8 @@ import TeamSection from "@/components/TeamSection";
 import DronePartsSection from "@/components/DronePartsSection";
 import ContactSection from "@/components/ContactSection";
 import TrustedBy from "@/components/TrustedBy";
+import DroneFAQ from "@/components/Faq";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -24,6 +26,8 @@ export default function Home() {
           <DronePartsSection/>
           <ContactSection/>
           <TrustedBy/>
+          <DroneFAQ/>
+          <Footer/>
         </div>
       </div>
     </main>
