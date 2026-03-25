@@ -29,8 +29,8 @@ const testimonials = [
 function QuoteBadge() {
   return (
     <div className="absolute right-0 top-0 z-20 h-15 w-15 rounded-bl-[30px] bg-[#fdf9fa] pl-2.5 pb-2.5">
-      <div className="flex h-full w-full items-center justify-center rounded-full bg-[#d6b5c8] text-black">
-        <Quote className="h-5 w-5 fill-current stroke-2" />
+      <div className="flex h-full w-full items-center justify-center rounded-full bg-[#2B411C] text-black">
+        <Quote className="h-5 w-5 fill-current stroke-2 text-white" />
       </div>
       <div className="absolute -left-5 top-0 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_#fdf9fa]" />
       <div className="absolute right-0 top-15 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_#fdf9fa]" />
@@ -54,7 +54,7 @@ export default function ClientVoices() {
 
           <a
             href="#"
-            className="inline-flex h-15.5 w-fit items-center rounded-full bg-[#d3b0c3] p-1 text-base font-bold text-white shadow-sm transition-transform duration-200 self-start lg:mt-18.5"
+            className="inline-flex h-15.5 w-fit items-center rounded-full bg-[#2B411C] p-1 text-base font-bold text-white shadow-sm transition-transform duration-200 self-start lg:mt-18.5"
           >
             <span className="px-7">See More</span>
             <span className="flex h-13.5 w-13.5 items-center justify-center rounded-full bg-white text-black">

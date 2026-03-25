@@ -26,7 +26,7 @@ export default function HeroSection() {
               precision, and elevate every flight with intelligent performance.
             </p>
 
-            {/* <button className="mt-10 inline-flex items-center gap-4 rounded-full bg-[#d7bcc8] px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90">
+            {/* <button className="mt-10 inline-flex items-center gap-4 rounded-full bg-[#2B411C] px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90">
               <span>Get Started</span>
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
                 <ArrowRight size={18} />
@@ -34,7 +34,7 @@ export default function HeroSection() {
             </button> */}
             <a
               href="#"
-              className="inline-flex h-15.5 w-fit items-center rounded-full bg-[#d3b0c3] p-1 text-base font-bold text-white shadow-sm transition-transform duration-200 self-start lg:mt-18.5"
+              className="inline-flex h-15.5 w-fit items-center rounded-full bg-[#2B411C] p-1 text-base font-bold text-white shadow-sm transition-transform duration-200 self-start lg:mt-18.5"
             >
               <span className="px-7">Get Started</span>
               <span className="flex h-13.5 w-13.5 items-center justify-center rounded-full bg-white text-black">

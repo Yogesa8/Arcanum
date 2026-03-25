@@ -30,8 +30,8 @@ export default function TeamCard({
         </div>
 
         <div className="absolute right-0 top-0 z-20 h-15 w-15 rounded-bl-[30px] bg-[#fdf9fa] pl-2.5 pb-2.5">
-          <div className="flex h-full w-full items-center justify-center rounded-full bg-[#d6b5c8] text-black transition-all group-hover:rotate-45 group-hover:bg-[#3d3138] group-hover:text-white">
-            <ArrowRight size={22} strokeWidth={2.1} />
+          <div className="flex h-full w-full items-center justify-center rounded-full bg-[#2B411C] text-black transition-all group-hover:rotate-45 group-hover:bg-[#3d3138] group-hover:text-white">
+            <ArrowRight size={22} strokeWidth={2.1} className="text-white"/>
           </div>
           <div className="absolute -left-5 top-0 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_#fdf9fa]" />
           <div className="absolute right-0 top-15 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_#fdf9fa]" />

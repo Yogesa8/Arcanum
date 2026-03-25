@@ -62,7 +62,7 @@ export default function Header() {
           <Mail size={18} />
           <MapPin size={18} />
 
-          <button className="rounded-full bg-[#d7bcc8] px-8 py-3 text-sm font-semibold text-white">
+          <button className="rounded-full bg-[#2B411C] px-8 py-3 text-sm font-semibold text-white">
             Shop Now
           </button>
         </div>
@@ -104,7 +104,7 @@ export default function Header() {
                 </div>
 
                 <DrawerClose asChild>
-                  <button className="mt-6 w-full rounded-full bg-[#d7bcc8] px-6 py-3 text-sm font-semibold text-white">
+                  <button className="mt-6 w-full rounded-full bg-[#2B411C] px-6 py-3 text-sm font-semibold text-white">
                     Shop Now
                   </button>
                 </DrawerClose>
