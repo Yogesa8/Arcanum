@@ -5,22 +5,22 @@ import TeamCard from "./TeamCard";
 
 const team = [
     {
-        name: "Sophie Kim",
-        role: "CMO",
-        image:
-            "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1200",
-    },
-    {
-        name: "Dan Smith",
-        role: "Lead Designer",
+        name: "Harsh Srivastava",
+        role: "CEO & DIRECTOR",
         image:
             "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200",
     },
     {
-        name: "Eva Green",
-        role: "Marketing Head",
+        name: "Manvender Kulhar",
+        role: "GROWTH MANAGER",
         image:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200",
+            "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200",
+    },
+    {
+        name: "Mohit Kumar Sangwan",
+        role: "CO-FOUNDER",
+        image:
+            "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200",
     }
 ];
 

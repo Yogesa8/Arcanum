@@ -10,6 +10,7 @@ import ContactSection from "@/components/ContactSection";
 import TrustedBy from "@/components/TrustedBy";
 import DroneFAQ from "@/components/Faq";
 import Footer from "@/components/Footer";
+import ContactDetails from "@/components/ContactDetails";
 
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
           <ContactSection/>
           <TrustedBy/>
           <DroneFAQ/>
+          <ContactDetails/>
           <Footer/>
         </div>
       </div>
