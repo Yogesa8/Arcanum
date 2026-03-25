@@ -28,7 +28,7 @@ export default function TrustedBy() {
                 className="h-30 flex items-center justify-center px-6
                 rounded-3xl border border-black/10
                 transition-all duration-300 ease-in-out
-                hover:bg-[#2b411c] hover:scale-[1.03] hover:shadow-sm"
+                hover:bg-[#74a057]  hover:scale-[1.03] hover:shadow-sm"
               >
                 <Image
                   src={logo}
