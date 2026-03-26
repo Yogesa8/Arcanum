@@ -35,8 +35,8 @@ const features = [
 
 export default function DronePartsSection() {
     return (
-        <section className=" bg-[#f5f5f5] px-5 py-20 sm:px-8 md:px-10 md:py-24 lg:px-16 lg:py-28">
-            <div className="max-w-6xl mx-auto">
+        <section className=" bg-[#f5f5f5] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+            <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="max-w-155">
                     <p className="inline-flex rounded-full border border-[#d8b6c8] px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black"> Drone Parts </p>
@@ -60,6 +60,7 @@ export default function DronePartsSection() {
                                         src={item.image}
                                         alt={item.title}
                                         fill
+                                        sizes="(max-width: 1279px) 100vw, 33vw"
                                         className="object-cover"
                                     />
                                 </div>

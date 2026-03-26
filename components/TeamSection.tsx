@@ -2,25 +2,25 @@
 
 import useEmblaCarousel from "embla-carousel-react";
 import TeamCard from "./TeamCard";
+import har from "../public/team/har.jpg"
+import man from "../public/team/man.jpg"
+import moh from "../public/team/moh.jpg"
 
 const team = [
     {
         name: "Harsh Srivastava",
         role: "CEO & DIRECTOR",
-        image:
-            "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200",
+        image: har,
     },
     {
         name: "Manvender Kulhar",
         role: "GROWTH MANAGER",
-        image:
-            "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200",
+        image: man,
     },
     {
         name: "Mohit Kumar Sangwan",
         role: "CO-FOUNDER",
-        image:
-            "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200",
+        image: moh,
     }
 ];
 
@@ -32,8 +32,8 @@ export default function TeamSection() {
     });
 
     return (
-        <section className="overflow-hidden h-full bg-[#fbfaf8] px-5 py-20 sm:px-8 md:px-10 md:py-24 lg:px-16 lg:py-28">
-            <div className="h-auto mx-auto max-w-330 ">
+        <section className="overflow-hidden h-full bg-[#fbfaf8] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+            <div className="max-w-7xl mx-auto">
                 <div className="max-w-155">
                     <span className="inline-flex rounded-full border border-[#d8b6c8] px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black">
                         Meet Us
@@ -55,7 +55,7 @@ export default function TeamSection() {
                                         ${index === 1 ? "lg:translate-y-14" : ""}
                                         ${index === 2 ? "lg:translate-y-1" : ""}
                                         ${index === 3 ? "lg:translate-y-14" : ""}`
-                                    }
+                                }
                             >
                                 <TeamCard {...item} />
                             </div>

@@ -4,7 +4,7 @@ import { ArrowRight, Quote } from "lucide-react";
 interface Props {
   name: string;
   role: string;
-  image: string;
+  image: "";
   className?: string;
 }
 
@@ -43,7 +43,7 @@ export default function TeamCard({
           <p className="text-sm font-semibold tracking-[-0.01em] text-white/90 transition-colors duration-300 group-hover:text-white">
             {role}
           </p>
-          <h3 className="mt-1 text-[clamp(2rem,3vw,2.6rem)] font-medium leading-none tracking-[-0.05em] text-white transition-colors duration-300 group-hover:text-[#fff8f0]">
+          <h3 className="mt-1 text-[clamp(2rem,3vw,2.6rem)] font-medium leading-none tracking-[-0.05em] text-[#2b411c] transition-colors duration-300 group-hover:text-[#fff8f0]">
             {name}
           </h3>
         </div>

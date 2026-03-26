@@ -1,24 +1,24 @@
 import Image from "next/image";
 import { ArrowRight, Quote } from "lucide-react";
+import client1 from "../public/client/c1.jpg"
+import client2 from "../public/client/c2.jpg"
+import client3 from "../public/client/c3.jpg"
 
 const testimonials = [
   {
-    image:
-      "https://images.unsplash.com/photo-1773402232837-aefde7d2c06f?q=80&w=721&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: client1,
     quote: "Pure joy! This drone takes my shots to new heights.",
     name: "Alex Ryan",
     role: "Photographer",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80",
+    image: client2,
     quote: "I didn't think tech could be this thrilling. Totally hooked!",
     name: "Sam Turner",
     role: "Videographer",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80",
+    image: client3,
     quote: "Durability and performance that exceeded my wildest dreams.",
     name: "Chris Weller",
     role: "Adventure Blogger",
@@ -40,8 +40,8 @@ function QuoteBadge() {
 
 export default function ClientVoices() {
   return (
-    <section className="bg-[#fdf9fa] px-5 py-20 sm:px-8 md:px-10 md:py-24 lg:px-16 lg:py-28">
-      <div className="mx-auto max-w-330">
+    <section className="bg-[#fdf9fa] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+      <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-155">
             <span className="inline-flex rounded-full border border-[#d8b6c8] px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black">

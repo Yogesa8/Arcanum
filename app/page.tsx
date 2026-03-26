@@ -11,6 +11,7 @@ import TrustedBy from "@/components/TrustedBy";
 import DroneFAQ from "@/components/Faq";
 import Footer from "@/components/Footer";
 import ContactDetails from "@/components/ContactDetails";
+import MilitaryGallery from "@/components/MilitaryGallery";
 
 
 export default function Home() {
@@ -20,12 +21,13 @@ export default function Home() {
         <Header />
         <div>
           <HeroSection />
-          <FeatureCarousel />
-          <ClientVoices />
           <KeyFeaturesSection/>
+          <FeatureCarousel />
+          <MilitaryGallery/>
           <TeamSection/>
           <DronePartsSection/>
           <ContactSection/>
+          <ClientVoices />
           <TrustedBy/>
           <DroneFAQ/>
           <ContactDetails/>

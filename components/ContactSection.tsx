@@ -10,8 +10,8 @@ const fields = [
 
 export default function ContactSection() {
   return (
-    <section className="bg-[#f3f3f3] px-5 py-20 sm:px-8 md:px-10 md:py-24 lg:px-16 lg:py-28">
-      <div className="mx-auto max-w-430">
+    <section className="bg-[#f3f3f3] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+      <div className="max-w-8xl mx-auto">
         <div className="relative overflow-visible rounded-[34px] bg-[#06111d]">
           <div
             aria-hidden="true"
@@ -50,7 +50,7 @@ export default function ContactSection() {
 
                 <button
                   type="submit"
-                  className="mt-9 inline-flex h-15.5 items-center overflow-hidden rounded-full bg-[#d1b3c4] pl-8 pr-1.5 text-[15px] font-semibold text-white transition hover:brightness-[0.97] md:mt-12 md:self-end"
+                  className="mt-9 inline-flex h-15.5 items-center overflow-hidden rounded-full bg-[#2b411c] pl-8 pr-1.5 text-[15px] font-semibold text-white transition hover:brightness-[0.97] md:mt-12 md:self-end"
                 >
                   <span className="whitespace-nowrap">Send Message</span>
                   <span className="ml-5 flex h-12.5 w-12.5 items-center justify-center rounded-full bg-white text-black">

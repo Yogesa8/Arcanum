@@ -13,6 +13,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import header from "../public/header.jpg"
 
 const navLinks = [
   { label: "Drones", href: "#" },
@@ -30,7 +31,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3">
             <div className="h-10 w-10 overflow-hidden rounded-full bg-slate-900">
               <Image
-                src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=200&q=80"
+                src={header}
                 alt="logo"
                 width={40}
                 height={40}
