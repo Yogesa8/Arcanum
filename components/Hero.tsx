@@ -10,6 +10,7 @@ export default function HeroSection() {
           <Image
             src={heroImg}
             alt="Professional drone flying in the sky"
+            loading="eager"
             fill
             sizes="(max-width: 1279px) 100vw, 33vw"
             className="h-full w-full object-cover"

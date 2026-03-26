@@ -70,7 +70,7 @@ export default function FeatureCarousel() {
   };
 
   return (
-    <section className="relative w-full bg-[#fdf9fa] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+    <section className="relative w-full bg-[#f5f1f3] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
       <div className="mx-auto">
       {/* Navigation buttons - positioned top-right like reference */}
       <div className="absolute border rounded-full right-6 top-6 md:right-10 md:top-10 flex z-20">

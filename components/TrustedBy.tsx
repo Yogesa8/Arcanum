@@ -10,7 +10,7 @@ export default function TrustedBy() {
   const logos = [short1, short3, short4, short5, short6];
 
   return (
-    <section className="bg-white px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+    <section className="bg-[#f5f1f3] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="max-w-155">

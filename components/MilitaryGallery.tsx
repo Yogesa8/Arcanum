@@ -6,7 +6,7 @@ import image4 from "../public/gallary/gallary4.jpg"
 
 const MilitaryGallery = () => {
     return (
-        <section className="bg-[#f7f6f2] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+        <section className="bg-[#fdf9fa] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
             <div className="max-w-7xl mx-auto">
 
                 {/* Header */}

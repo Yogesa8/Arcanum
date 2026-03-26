@@ -46,7 +46,7 @@ const featuresData = [
 export default function KeyFeaturesSection() {
   const [activeFeature, setActiveFeature] = useState(featuresData[0]);
   return (
-    <section className="bg-[#f5f5f5] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+    <section className="bg-[#fdf9fa] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row gap-10 md:gap-20">
 
         {/* LEFT */}
