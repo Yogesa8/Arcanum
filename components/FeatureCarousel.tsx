@@ -70,7 +70,8 @@ export default function FeatureCarousel() {
   };
 
   return (
-    <div className="relative w-full bg-[#fdf9fa] py-20 md:py-20">
+    <section className="relative w-full bg-[#fdf9fa] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+      <div className="mx-auto">
       {/* Navigation buttons - positioned top-right like reference */}
       <div className="absolute border rounded-full right-6 top-6 md:right-10 md:top-10 flex z-20">
         <button
@@ -127,6 +128,7 @@ export default function FeatureCarousel() {
               src={card.image}
               alt={card.title}
               fill
+              sizes="(max-width: 1279px) 100vw, 33vw"
               className="object-cover brightness-[0.85] transition-all duration-500 group-hover:brightness-100"
               priority={i < 2}
             />
@@ -164,6 +166,7 @@ export default function FeatureCarousel() {
           </div>
         ))}
       </div>
-    </div>
+      </div>
+    </section>
   );
 }

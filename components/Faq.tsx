@@ -39,13 +39,13 @@ const faqs = [
 export default function DroneFAQ() {
      const [openIndex, setOpenIndex] = useState(null);
 
-     const toggle = (index:any) => {
+     const toggle = (index: any) => {
           setOpenIndex(openIndex === index ? null : index);
      };
 
      return (
-          <section className="bg-[#f5f5f5] px-5 py-20 sm:px-8 md:px-10 md:py-24 lg:px-16 lg:py-28">
-               <div className="max-w-5xl mx-auto px-4">
+          <section className="bg-[#f5f5f5] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+               <div className="max-w-7xl mx-auto">
 
                     {/* Top Label */}
                     <div className="max-w-155">
@@ -75,11 +75,11 @@ export default function DroneFAQ() {
                                         {/* Left Icon + Question */}
                                         <div className="flex items-center gap-4">
 
-                                             <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#e7d3dc]">
+                                             <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#2b411c] text-white">
                                                   ?
                                              </div>
 
-                                             <h3 className="font-medium text-lg">
+                                             <h3 className="font-medium text-lg text">
                                                   {faq.question}
                                              </h3>
                                         </div>

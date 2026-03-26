@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import heroImg from "../public/hero_img.jpg"
 
 export default function HeroSection() {
   return (
@@ -7,9 +8,10 @@ export default function HeroSection() {
       <div className=" mx-auto grid h-full min-h-[calc(100vh-7.5rem)] w-full grid-cols-1 overflow-hidden rounded-4xl bg-[#f5f1f3] lg:min-h-[calc(100vh-8.5rem)] lg:grid-cols-[1.05fr_1fr]">
         <div className="relative min-h-105 lg:min-h-175">
           <Image
-            src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1400&q=80"
+            src={heroImg}
             alt="Professional drone flying in the sky"
             fill
+            sizes="(max-width: 1279px) 100vw, 33vw"
             className="h-full w-full object-cover"
           />
         </div>

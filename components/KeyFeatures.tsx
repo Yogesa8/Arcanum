@@ -1,6 +1,11 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import stablity from "../public/features/superior.jpg"
+import Gen_camera from "../public/features/gen_camera.jpg"
+import Controls from "../public/features/controls.jpg"
+import battery from "../public/features/battery.jpg"
+
 
 // Data Configuration for the features
 const featuresData = [
@@ -10,7 +15,7 @@ const featuresData = [
     shortDesc: "Advanced gimbal technology.",
     fullDesc:
       "Capture steady footage even in high winds with our 3-axis stabilization system.",
-    img: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=800&q=80",
+    img: stablity,
   },
   {
     id: 2,
@@ -18,7 +23,7 @@ const featuresData = [
     shortDesc: "8K resolution recording.",
     fullDesc:
       "Professional-grade sensor captures every detail with stunning dynamic range.",
-    img: "https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&w=800&q=80",
+    img: Gen_camera,
   },
   {
     id: 3,
@@ -26,7 +31,7 @@ const featuresData = [
     shortDesc: "Effortless pilot experience.",
     fullDesc:
       "Effortless controls for seamless flight, designed for beginners and pros alike.",
-    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    img: Controls,
   },
   {
     id: 4,
@@ -34,14 +39,14 @@ const featuresData = [
     shortDesc: "Up to 45 mins flight.",
     fullDesc:
       "Industry-leading battery life keeps you in the air longer for the perfect shot.",
-    img: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=800&q=80",
+    img: battery,
   },
 ];
 
 export default function KeyFeaturesSection() {
   const [activeFeature, setActiveFeature] = useState(featuresData[0]);
   return (
-    <section className="bg-[#f5f5f5] px-5 py-20 sm:px-8 md:px-10 md:py-24 lg:px-16 lg:py-28">
+    <section className="bg-[#f5f5f5] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row gap-10 md:gap-20">
 
         {/* LEFT */}
@@ -84,6 +89,7 @@ export default function KeyFeaturesSection() {
               src={activeFeature.img}
               alt={activeFeature.title}
               fill
+              sizes="(max-width: 1279px) 100vw, 33vw"
               className="object-cover rounded-[20px]"
             />
             <div
