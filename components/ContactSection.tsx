@@ -10,7 +10,7 @@ const fields = [
 
 export default function ContactSection() {
   return (
-    <section className="bg-[#f3f3f3] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+    <section className="bg-[#f5f1f3] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
       <div className="max-w-8xl mx-auto">
         <div className="relative overflow-visible rounded-[34px] bg-[#06111d]">
           <div

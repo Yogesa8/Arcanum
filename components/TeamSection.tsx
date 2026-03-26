@@ -32,7 +32,7 @@ export default function TeamSection() {
     });
 
     return (
-        <section className="overflow-hidden h-full bg-[#fbfaf8] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+        <section className="overflow-hidden h-full bg-[#f5f1f3] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
             <div className="max-w-7xl mx-auto">
                 <div className="max-w-155">
                     <span className="inline-flex rounded-full border border-[#d8b6c8] px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black">

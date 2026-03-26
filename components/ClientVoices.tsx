@@ -65,7 +65,7 @@ export default function ClientVoices() {
 
         <div className="mt-14 grid gap-8 xl:grid-cols-3">
           {testimonials.map((item) => (
-            <article key={item.name} className="rounded-[30px_0px_30px_30px] bg-[#fffdfd] shadow-[0_18px_60px_rgba(185,162,171,0.08)]">
+            <article key={item.name} className="rounded-[30px_0px_30px_30px] bg-[#fdf9fa] shadow-[0_18px_60px_rgba(185,162,171,0.08)]">
               <div className="relative">
                 <div className="relative h-65 overflow-hidden rounded-[30px] md:h-70">
                   <Image
