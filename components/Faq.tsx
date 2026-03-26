@@ -37,9 +37,9 @@ const faqs = [
 ];
 
 export default function DroneFAQ() {
-     const [openIndex, setOpenIndex] = useState(null);
+     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-     const toggle = (index: any) => {
+     const toggle = (index: number) => {
           setOpenIndex(openIndex === index ? null : index);
      };
 

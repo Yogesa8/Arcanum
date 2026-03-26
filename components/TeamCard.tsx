@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { ArrowRight, Quote } from "lucide-react";
 
 interface Props {
   name: string;
   role: string;
-  image: "";
+  image: StaticImageData;
   className?: string;
 }
 
