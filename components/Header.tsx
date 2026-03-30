@@ -16,10 +16,10 @@ import {
 import header from "../public/header.jpg"
 
 const navLinks = [
-  { label: "Drones", href: "#" },
-  { label: "Cameras", href: "#" },
-  { label: "Accessories", href: "#" },
-  { label: "Support", href: "#" },
+  { label: "Features", href: "/features" },
+  { label: "Drone", href: "/drone" },
+  { label: "Accessories", href: "/accessories" },
+  { label: "About", href: "/about" },
 ];
 
 export default function Header() {
@@ -49,7 +49,7 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm font-semibold text-slate-900 hover:text-[#c8a9b7]"
+                className="text-sm font-semibold text-slate-900 hover:text-[#023020]"
               >
                 {link.label}
               </Link>
