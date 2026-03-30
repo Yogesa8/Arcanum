@@ -6,13 +6,13 @@ import image4 from "../public/gallary/gallary4.jpg"
 
 const MilitaryGallery = () => {
     return (
-        <section className="bg-[#fdf9fa] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+        <section className="bg-brand-bg-pink px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
             <div className="max-w-7xl mx-auto">
 
                 {/* Header */}
                 <div className="max-w-155">
-                    <p className="inline-flex rounded-full border border-[#d8b6c8] px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black"> Showcase </p>
-                    <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8 md:mb-12">
+                    <p className="inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black"> Showcase </p>
+                    <h2 className="mb-8 text-4xl font-black leading-tight md:mb-12 md:text-6xl">
                         Perspectives
                     </h2>
                 </div>

@@ -4,7 +4,7 @@ import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2b411c] text-white pt-16 pb-8">
+    <footer className="bg-brand-primary text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Grid */}
@@ -12,8 +12,8 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">Arcanum Space</h2>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <h2 className="mb-4 text-2xl font-black">Arcanum Space</h2>
+            <p className="text-neutral-400 text-sm leading-relaxed">
               We build advanced drone solutions for surveillance, agriculture,
               and aerial innovation. Designed for precision, powered by technology.
             </p>
@@ -30,7 +30,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
+            <ul className="space-y-2 text-neutral-400 text-sm">
               <li className="hover:text-white cursor-pointer">Home</li>
               <li className="hover:text-white cursor-pointer">About Us</li>
               <li className="hover:text-white cursor-pointer">Products</li>
@@ -41,7 +41,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h3 className="font-semibold mb-4">Our Services</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
+            <ul className="space-y-2 text-neutral-400 text-sm">
               <li className="hover:text-white cursor-pointer">Aerial Surveillance</li>
               <li className="hover:text-white cursor-pointer">Agriculture Drones</li>
               <li className="hover:text-white cursor-pointer">Drone Mapping</li>
@@ -52,7 +52,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
+            <ul className="space-y-2 text-neutral-400 text-sm">
               <li>1101, AH Tower,</li>
               <li>Antriksh Heights, Sector 81</li>
               <li>Gurgaon, India</li>
@@ -67,7 +67,7 @@ export default function Footer() {
         <div className="border-t border-white/10 my-8"></div>
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+        <div className="flex flex-col md:flex-row justify-between items-center text-neutral-500 text-sm">
           <p>© {new Date().getFullYear()} Arcanum Space. All rights reserved.</p>
         </div>
 

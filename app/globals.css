@@ -15,6 +15,13 @@ main {
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-dark: var(--brand-primary-dark);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-bg-subtle: var(--brand-bg-subtle);
+  --color-brand-bg-warm: var(--brand-bg-warm);
+  --color-brand-bg-pink: var(--brand-bg-pink);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
@@ -90,6 +97,14 @@ main {
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Semantic Brand Colors */
+  --brand-primary: #2B411C;
+  --brand-primary-dark: #023020;
+  --brand-secondary: #d8b6c8;
+  --brand-bg-subtle: #f3f3f3;
+  --brand-bg-warm: #f5f1f3;
+  --brand-bg-pink: #fdf9fa;
 }
 
 .dark {
