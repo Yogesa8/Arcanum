@@ -70,7 +70,7 @@ export default function FeatureCarousel() {
   };
 
   return (
-    <section className="relative w-full bg-[#f5f1f3] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+    <section className="relative w-full bg-brand-bg-warm px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
       <div className="mx-auto">
       {/* Navigation buttons - positioned top-right like reference */}
       <div className="absolute border rounded-full right-6 top-6 md:right-10 md:top-10 flex z-20">
@@ -107,12 +107,10 @@ export default function FeatureCarousel() {
         ref={scrollRef}
         className="h-auto md:h-auto lg:h-auto flex gap-8 md:gap-10 overflow-x-auto py-6 px-6 md:px-16 lg:px-20 scroll-smooth snap-x snap-mandatory no-scrollbar " >
         {cards.map((card, i) => (
-          <div
-            key={i}
-            className="
+          <div key={i} className="
               group
               relative
-              min-w-75 sm:min-w-85 md:min-w-90
+              min-w-65 sm:min-w-75 md:min-w-80
               h-95 sm:h-105 md:h-115
               rounded-2xl overflow-hidden
               bg-gray-950
@@ -133,33 +131,21 @@ export default function FeatureCarousel() {
             />
 
             {/* Overlay - dark by default, lighter on hover */}
-            <div
-              className="
-                absolute inset-0
-                bg-linear-to-t from-black/80 via-black/40 to-transparent
-                transition-opacity duration-500
-                group-hover:from-black/60 group-hover:via-black/25
-              "
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 group-hover:from-black/60 group-hover:via-black/25"
             />
 
             {/* Text content */}
             <div className="absolute inset-x-0 bottom-0 p-8 text-white z-10">
-              <h3 className="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
+              <h3 className="mb-3 text-2xl font-black tracking-tight md:text-3xl">
                 {card.title}
               </h3>
-              <p className="text-base md:text-lg opacity-90 leading-relaxed mb-6">
+              <p className="mb-6 text-base leading-relaxed text-white/90 md:text-lg">
                 {card.desc}
               </p>
               <button
-                className="
-                  inline-flex items-center gap-2
-                  rounded-full px-6 py-2.5
-                  text-sm font-medium
-                  border border-white/40
-                  transition-colors hover:bg-white/10
-                "
+                className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-2.5 text-sm font-semibold transition-all hover:bg-white/10 active:scale-95"
               >
-                Läs Mer →
+                Learn More →
               </button>
             </div>
           </div>

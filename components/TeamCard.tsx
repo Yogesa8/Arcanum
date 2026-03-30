@@ -16,7 +16,7 @@ export default function TeamCard({
 }: Props) {
   return (
     <article className={`group relative z-10 hover:z-20 w-full max-w-102.5 ${className}`.trim()}>
-      <div className="relative aspect-[0.82] overflow-visible rounded-[30px] bg-[#f5f1f3]">
+      <div className="relative aspect-[0.82] overflow-visible rounded-[30px] bg-brand-bg-warm">
         <div className="absolute inset-0 overflow-hidden rounded-[30px]">
           <Image
             src={image}
@@ -29,12 +29,12 @@ export default function TeamCard({
           <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-black/18 via-black/0 to-transparent" />
         </div>
 
-        <div className="absolute right-0 top-0 z-20 h-15 w-15 rounded-bl-[30px] bg-[#f5f1f3] pl-2.5 pb-2.5">
-          <div className="flex h-full w-full items-center justify-center rounded-full bg-[#2B411C] text-black transition-all group-hover:rotate-45 group-hover:bg-[#3d3138] group-hover:text-white">
+        <div className="absolute right-0 top-0 z-20 h-15 w-15 rounded-bl-[30px] bg-brand-bg-warm pl-2.5 pb-2.5">
+          <div className="flex h-full w-full items-center justify-center rounded-full bg-brand-primary text-black transition-all group-hover:rotate-45 group-hover:bg-brand-primary-dark group-hover:text-white">
             <ArrowRight size={22} strokeWidth={2.1} className="text-white"/>
           </div>
-          <div className="absolute -left-5 top-0 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_#f5f1f3]" />
-          <div className="absolute right-0 top-15 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_#f5f1f3]" />
+          <div className="absolute -left-5 top-0 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_var(--brand-bg-warm)]" />
+          <div className="absolute right-0 top-15 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_var(--brand-bg-warm)]" />
         </div>
 
         <div
@@ -43,7 +43,7 @@ export default function TeamCard({
           <p className="text-sm font-semibold tracking-[-0.01em] text-white/90 transition-colors duration-300 group-hover:text-white">
             {role}
           </p>
-          <h3 className="mt-1 text-[clamp(2rem,3vw,2.6rem)] font-medium leading-none tracking-[-0.05em] text-[#2b411c] transition-colors duration-300 group-hover:text-[#fff8f0]">
+          <h3 className="mt-1 text-[clamp(2rem,3vw,2.6rem)] font-black leading-none tracking-tight text-brand-primary transition-colors duration-300 group-hover:text-white">
             {name}
           </h3>
         </div>

@@ -51,9 +51,9 @@ export default function Header() {
                 href={link.href}
                 className="relative text-sm font-semibold text-slate-900 
                  after:content-[''] after:absolute after:left-0 after:-bottom-1
-                 after:h-[2px] after:w-0 after:bg-[#023020]
+                 after:h-[2px] after:w-0 after:bg-brand-primary-dark
                  after:transition-all after:duration-300 after:ease-in-out
-                 hover:after:w-full hover:text-[#023020]"
+                 hover:after:w-full hover:text-brand-primary-dark"
               >
                 {link.label}
               </Link>
@@ -67,7 +67,7 @@ export default function Header() {
           <Mail size={18} />
           <MapPin size={18} />
 
-          <button className="rounded-full bg-[#2B411C] px-8 py-3 text-sm font-semibold text-white">
+          <button className="rounded-full bg-brand-primary px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-brand-primary-dark active:scale-95">
             Shop Now
           </button>
         </div>
@@ -109,7 +109,7 @@ export default function Header() {
                 </div>
 
                 <DrawerClose asChild>
-                  <button className="mt-6 w-full rounded-full bg-[#2B411C] px-6 py-3 text-sm font-semibold text-white">
+                  <button className="mt-6 w-full rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white active:scale-95">
                     Shop Now
                   </button>
                 </DrawerClose>

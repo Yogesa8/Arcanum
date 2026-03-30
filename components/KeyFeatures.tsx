@@ -46,17 +46,17 @@ const featuresData = [
 export default function KeyFeaturesSection() {
   const [activeFeature, setActiveFeature] = useState(featuresData[0]);
   return (
-    <section className="bg-[#fdf9fa] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+    <section className="bg-brand-bg-pink px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row gap-10 md:gap-20">
 
         {/* LEFT */}
         <div className="w-full md:w-[35%]">
 
-          <span className="inline-flex rounded-full border border-[#d8b6c8] px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black">
+          <span className="inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black">
             Key Features
           </span>
 
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8 md:mb-12">
+          <h2 className="mb-8 font-black leading-tight text-black text-4xl md:mb-12 md:text-6xl">
             Unmatched <br />
             Performance <br />
             Ahead
@@ -93,12 +93,12 @@ export default function KeyFeaturesSection() {
               className="object-cover rounded-[20px]"
             />
             <div
-              className="absolute bottom-0 left-0 w-28 sm:w-40 md:w-55 h-12 sm:h-14 md:h-15 bg-[#fdf9fa] rounded-tr-[20px] sm:rounded-tr-[30px] z-10
+              className="absolute bottom-0 left-0 w-28 sm:w-40 md:w-55 h-12 sm:h-14 md:h-15 bg-[var(--brand-bg-pink)] rounded-tr-[20px] sm:rounded-tr-[30px] z-10
                   before:content-[''] before:absolute before:-top-4 sm:before:-top-5 before:left-0 before:w-4 sm:before:w-5 before:h-4 sm:before:h-5
-                  before:bg-transparent before:rounded-bl-[20px] sm:before:rounded-bl-[30px] before:shadow-[-8px_8px_0_8px_#fdf9fa] sm:before:shadow-[-10px_10px_0_10px_#fdf9fa]
+                  before:bg-transparent before:rounded-bl-[20px] sm:before:rounded-bl-[30px] before:shadow-[-8px_8px_0_8px_var(--brand-bg-pink)] sm:before:shadow-[-10px_10px_0_10px_var(--brand-bg-pink)]
 
                   after:content-[''] after:absolute after:bottom-0 after:-right-4 sm:after:-right-5 after:w-4 sm:after:w-5 after:h-4 sm:after:h-5
-                  after:bg-transparent after:rounded-bl-[20px] sm:after:rounded-bl-[30px] after:shadow-[-8px_8px_0_8px_#fdf9fa] sm:after:shadow-[-10px_10px_0_10px_#fdf9fa]
+                  after:bg-transparent after:rounded-bl-[20px] sm:after:rounded-bl-[30px] after:shadow-[-8px_8px_0_8px_var(--brand-bg-pink)] sm:after:shadow-[-10px_10px_0_10px_var(--brand-bg-pink)]
                 "
             ></div>
           </div>
@@ -109,9 +109,9 @@ export default function KeyFeaturesSection() {
               {activeFeature.title}
             </h3>
 
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              {activeFeature.fullDesc}
-            </p>
+            <p className="text-base leading-relaxed text-neutral-500">
+               {activeFeature.fullDesc}
+             </p>
           </div>
         </div>
       </div>

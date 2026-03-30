@@ -1,11 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import heroImg from "../public/hero_img.jpg"
+import heroImg from "../public/hero_img.jpg";
 
 export default function HeroSection() {
   return (
     <section className=" flex min-h-screen w-full px-5 pb-5 pt-24 sm:px-8 sm:pb-8 md:px-10 md:pt-28 ">
-      <div className=" mx-auto grid h-full min-h-[calc(100vh-7.5rem)] w-full grid-cols-1 overflow-hidden rounded-4xl bg-[#f5f1f3] lg:min-h-[calc(100vh-8.5rem)] lg:grid-cols-[1.05fr_1fr]">
+      <div className=" mx-auto grid h-full min-h-[calc(100vh-7.5rem)] w-full grid-cols-1 overflow-hidden rounded-4xl bg-brand-bg-warm lg:min-h-[calc(100vh-8.5rem)] lg:grid-cols-[1.05fr_1fr]">
         <div className="relative min-h-105 lg:min-h-175">
           <Image
             src={heroImg}
@@ -17,8 +17,8 @@ export default function HeroSection() {
           />
         </div>
 
-        <div className="flex flex-col justify-between px-8 py-12 sm:px-14 lg:px-16 lg:py-16">
-          <div className="mt-10 max-w-140">
+        <div className="flex flex-col justify-between px-5 py-8 sm:px-10 sm:py-10 lg:px-16 lg:py-16">
+          <div className="mt-8 max-w-140">
             <h1 className="max-w-130 text-5xl font-black leading-[0.95] tracking-tight text-black sm:text-6xl lg:text-7xl">
               Fly Into The Future
             </h1>
@@ -28,18 +28,11 @@ export default function HeroSection() {
               and professionals. Capture cinematic aerial footage, navigate with
               precision, and elevate every flight with intelligent performance.
             </p>
-
-            {/* <button className="mt-10 inline-flex items-center gap-4 rounded-full bg-[#2B411C] px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90">
-              <span>Get Started</span>
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black">
-                <ArrowRight size={18} />
-              </span>
-            </button> */}
-            <a
-              href="#"
-              className="inline-flex h-15.5 w-fit items-center rounded-full bg-[#2B411C] p-1 text-base font-bold text-white shadow-sm transition-transform duration-200 self-start lg:mt-18.5"
+            
+            <a href="#"
+              className="inline-flex h-15.5 w-fit items-center rounded-full bg-brand-primary p-1 text-base font-bold text-white shadow-sm transition-all duration-200 hover:bg-brand-primary-dark active:scale-95 self-start mt-6 sm:mt-8 lg:mt-18.5"
             >
-              <span className="px-7">Get Started</span>
+              <span className="px-5 sm:px-7">Get Started</span>
               <span className="flex h-13.5 w-13.5 items-center justify-center rounded-full bg-white text-black">
                 <ArrowRight className="h-5 w-5" />
               </span>
@@ -51,7 +44,7 @@ export default function HeroSection() {
             <div className="h-9 w-px bg-neutral-300" />
             <span className="text-2xl font-extrabold text-black">World Leader</span>
           </div>
-        </div>
+        </div>        
       </div>
     </section>
   );

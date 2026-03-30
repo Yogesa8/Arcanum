@@ -10,7 +10,7 @@ const fields = [
 
 export default function ContactSection() {
   return (
-    <section className="bg-[#f5f1f3] px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+    <section className="bg-brand-bg-warm px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
       <div className="max-w-8xl mx-auto">
         <div className="relative overflow-visible rounded-[34px] bg-[#06111d]">
           <div
@@ -27,11 +27,11 @@ export default function ContactSection() {
 
           <div className="relative z-10 px-4 py-12 sm:px-8 md:px-14 md:py-16 lg:px-19.5 lg:py-24">
             <div className="mx-auto flex min-h-135 max-w-331.25 flex-col items-center rounded-[34px] bg-white px-6 py-12 shadow-[0_20px_60px_rgba(0,0,0,0.08)] sm:px-10 md:px-16 md:py-16 lg:px-24 lg:py-23">
-              <div className="mb-7 inline-flex rounded-full border border-[#d9b6ca] px-5 py-2 text-[14px] font-semibold text-black">
+              <div className="mb-7 inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold text-black">
                 Get In Touch
               </div>
 
-              <h2 className="text-center font-['Manrope'] text-[34px] font-medium tracking-[-0.04em] text-black sm:text-[42px] md:text-[50px] lg:text-[54px]">
+              <h2 className="text-center text-4xl font-black leading-tight text-black md:text-6xl">
                 We Want To Hear
               </h2>
 
@@ -43,14 +43,14 @@ export default function ContactSection() {
                       name={field.name}
                       type={field.type}
                       placeholder={field.placeholder}
-                      className="h-14.5 w-full rounded-full border border-transparent bg-[#f3f3f3] px-8 text-[18px] text-[#222] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#d9b6ca] focus:bg-white"
+                      className="h-14.5 w-full rounded-full border border-transparent bg-brand-bg-subtle px-8 text-lg text-neutral-900 outline-none transition placeholder:text-neutral-400 focus:border-brand-secondary focus:bg-white"
                     />
                   ))}
                 </div>
 
                 <button
                   type="submit"
-                  className="mt-9 inline-flex h-15.5 items-center overflow-hidden rounded-full bg-[#2b411c] pl-8 pr-1.5 text-[15px] font-semibold text-white transition hover:brightness-[0.97] md:mt-12 md:self-end"
+                  className="mt-9 inline-flex h-15.5 items-center overflow-hidden rounded-full bg-brand-primary pl-8 pr-1.5 text-sm font-semibold text-white transition-all hover:bg-brand-primary-dark hover:brightness-[0.97] active:scale-95 md:mt-12 md:self-end"
                 >
                   <span className="whitespace-nowrap">Send Message</span>
                   <span className="ml-5 flex h-12.5 w-12.5 items-center justify-center rounded-full bg-white text-black">
@@ -63,15 +63,15 @@ export default function ContactSection() {
 
           <div
             aria-hidden="true"
-            className="absolute bottom-0 left-0 z-20 h-14.5 w-42 rounded-tr-[30px] bg-[#f3f3f3]"
+            className="absolute bottom-0 left-0 z-20 h-14.5 w-42 rounded-tr-[30px] bg-brand-bg-subtle"
           />
           <div
             aria-hidden="true"
-            className="absolute bottom-14.5 left-0 z-20 h-5 w-5 rounded-bl-[20px] bg-transparent shadow-[-10px_10px_0_10px_#f3f3f3]"
+            className="absolute bottom-14.5 left-0 z-20 h-5 w-5 rounded-bl-[20px] bg-transparent shadow-[-10px_10px_0_10px_var(--brand-bg-subtle)]"
           />
           <div
             aria-hidden="true"
-            className="absolute bottom-0 left-42 z-20 h-5 w-5 rounded-bl-[20px] bg-transparent shadow-[-10px_10px_0_10px_#f3f3f3]"
+            className="absolute bottom-0 left-42 z-20 h-5 w-5 rounded-bl-[20px] bg-transparent shadow-[-10px_10px_0_10px_var(--brand-bg-subtle)]"
           />
         </div>
       </div>
