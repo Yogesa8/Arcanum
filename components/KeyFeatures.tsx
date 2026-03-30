@@ -95,10 +95,10 @@ export default function KeyFeaturesSection() {
             <div
               className="absolute bottom-0 left-0 w-28 sm:w-40 md:w-55 h-12 sm:h-14 md:h-15 bg-[#fdf9fa] rounded-tr-[20px] sm:rounded-tr-[30px] z-10
                   before:content-[''] before:absolute before:-top-4 sm:before:-top-5 before:left-0 before:w-4 sm:before:w-5 before:h-4 sm:before:h-5
-                  before:bg-transparent before:rounded-bl-[20px] sm:before:rounded-bl-[30px] before:shadow-[-8px_8px_0_8px_#f5f5f5] sm:before:shadow-[-10px_10px_0_10px_#f5f5f5]
+                  before:bg-transparent before:rounded-bl-[20px] sm:before:rounded-bl-[30px] before:shadow-[-8px_8px_0_8px_#fdf9fa] sm:before:shadow-[-10px_10px_0_10px_#f5f5f5]
 
                   after:content-[''] after:absolute after:bottom-0 after:-right-4 sm:after:-right-5 after:w-4 sm:after:w-5 after:h-4 sm:after:h-5
-                  after:bg-transparent after:rounded-bl-[20px] sm:after:rounded-bl-[30px] after:shadow-[-8px_8px_0_8px_#f5f5f5] sm:after:shadow-[-10px_10px_0_10px_#f5f5f5]
+                  after:bg-transparent after:rounded-bl-[20px] sm:after:rounded-bl-[30px] after:shadow-[-8px_8px_0_8px_#fdf9fa] sm:after:shadow-[-10px_10px_0_10px_#f5f5f5]
                 "
             ></div>
           </div>
