@@ -10,6 +10,7 @@ import Bildkvalitet from "../public/feature/img5.jpg"
 import Ljud from "../public/feature/img6.jpg"
 import Enkelh from "../public/feature/img8.jpg"
 import Desig from "../public/feature/img9.jpg"
+import { Reveal } from "./Animations";
 
 const cards = [
   {
@@ -73,7 +74,7 @@ export default function FeatureCarousel() {
     <section className="relative w-full bg-brand-bg-warm px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
       <div className="mx-auto">
       {/* Navigation buttons - positioned top-right like reference */}
-      <div className="absolute border rounded-full right-6 top-6 md:right-10 md:top-10 flex z-20">
+      <Reveal delay={100} className="absolute border rounded-full right-6 top-6 md:right-10 md:top-10 flex z-20">
         <button
           onClick={() => scroll("left")}
           className="
@@ -100,14 +101,17 @@ export default function FeatureCarousel() {
         >
           <span className="text-xl font-light"><ChevronRight /></span>
         </button>
-      </div>
+      </Reveal>
 
       {/* Cards container */}
       <div
         ref={scrollRef}
         className="h-auto md:h-auto lg:h-auto flex gap-8 md:gap-10 overflow-x-auto py-6 px-6 md:px-16 lg:px-20 scroll-smooth snap-x snap-mandatory no-scrollbar " >
         {cards.map((card, i) => (
-          <div key={i} className="
+          <Reveal
+            key={i}
+            delay={200 + i * 100}
+            className="
               group
               relative
               min-w-65 sm:min-w-75 md:min-w-80
@@ -148,7 +152,7 @@ export default function FeatureCarousel() {
                 Learn More →
               </button>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
       </div>

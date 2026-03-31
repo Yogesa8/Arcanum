@@ -1,16 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-
-* {
-  font-family: "Google Sans", sans-serif;
-}
-
-main {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -143,7 +134,7 @@ main {
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 font-sans;
   }
 
   body {
@@ -153,6 +144,12 @@ main {
   html {
     @apply font-sans;
   }
+
+  main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -161,4 +158,28 @@ main {
 
 .no-scrollbar {
   scrollbar-width: none;
+}
+
+/* Reveal on Scroll Animations */
+@layer utilities {
+  .reveal-hidden {
+    opacity: 0 !important;
+    transform: translateY(30px) !important;
+    transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), 
+                transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+    will-change: opacity, transform;
+  }
+
+  .reveal-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-hidden {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }

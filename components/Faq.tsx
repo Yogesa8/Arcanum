@@ -2,38 +2,44 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { Reveal } from "./Animations";
 
 const faqs = [
      {
-          question: "What makes your drones unique?",
+          question: "What makes your drones mission-ready?",
           answer:
-               "Our drones are built with advanced stabilization, AI-assisted navigation, and high-end cameras for professional results.",
+               "Our drones are engineered with military-grade stabilization, AI-driven navigation, and secure communication systems, ensuring reliable performance in high-risk and mission-critical environments.",
      },
      {
-          question: "Are your drones beginner-friendly?",
+          question: "Can your drones operate autonomously?",
           answer:
-               "Yes, our drones are designed for both beginners and professionals with easy controls and smart flight modes.",
+               "Yes, our UAV systems support autonomous missions with waypoint navigation, obstacle avoidance, and real-time decision-making powered by advanced AI algorithms.",
      },
      {
-          question: "What industries use your drones?",
+          question: "Which sectors are your drones designed for?",
           answer:
-               "Our drones are widely used in agriculture, surveillance, cinematography, and industrial inspections.",
+               "Our drones are primarily built for defense, surveillance, border security, industrial monitoring, and critical infrastructure inspection.",
      },
      {
-          question: "Do you provide after-sales support?",
+          question: "Do you provide technical and operational support?",
           answer:
-               "Yes, we offer full technical support, maintenance guidance, and quick service assistance.",
+               "Yes, we offer complete support including deployment guidance, maintenance services, and technical assistance to ensure uninterrupted operations.",
      },
      {
-          question: "How long does the battery last?",
+          question: "What is the operational flight duration?",
           answer:
-               "Depending on the model, our drones offer flight times ranging from 25 to 60 minutes.",
+               "Our drones are equipped with long-endurance power systems, offering extended flight durations depending on mission requirements and payload configuration.",
      },
      {
-          question: "Do your drones come with warranty?",
+          question: "Do your drones include warranty and service coverage?",
           answer:
-               "Yes, all our drones come with a standard warranty and optional extended coverage.",
+               "Yes, all our systems come with standard warranty coverage, with options for extended service plans tailored for enterprise and defense operations.",
      },
+     {
+          question: "Are your systems compliant with security standards?",
+          answer:
+               "Yes, our drones are designed with secure communication protocols and comply with industry-grade safety and operational standards required for sensitive missions.",
+     }
 ];
 
 export default function DroneFAQ() {
@@ -44,18 +50,22 @@ export default function DroneFAQ() {
      };
 
      return (
-          <section className="bg-brand-bg-pink px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+          <section className="bg-brand-bg-warm px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
                <div className="max-w-7xl mx-auto">
 
                     {/* Top Label */}
                     <div className="max-w-155">
-                         <p className="inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black">
-                              Common Questions
-                         </p>
+                         <Reveal delay={100}>
+                              <p className="inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black">
+                                   Common Questions
+                              </p>
+                         </Reveal>
                          {/* Heading */}
-                         <h2 className="text-4xl md:text-6xl font-black leading-tight mb-8 md:mb-12">
-                              You Ask, We Answer
-                         </h2>
+                         <Reveal delay={200}>
+                              <h2 className="text-4xl md:text-6xl font-black leading-tight mb-8 md:mb-12">
+                                   You Ask, We Answer
+                              </h2>
+                         </Reveal>
                     </div>
 
 
@@ -66,7 +76,7 @@ export default function DroneFAQ() {
                     {/* FAQ List */}
                     <div className="space-y-6">
                          {faqs.map((faq, index) => (
-                              <div key={index} className="border-b border-black/10 pb-4">
+                              <Reveal key={index} delay={300 + index * 100} className="border-b border-black/10 pb-4">
 
                                    <button
                                         onClick={() => toggle(index)}
@@ -101,7 +111,7 @@ export default function DroneFAQ() {
                                         </p>
                                    </div>
 
-                              </div>
+                              </Reveal>
                          ))}
                     </div>
                </div>

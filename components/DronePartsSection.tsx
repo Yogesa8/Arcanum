@@ -5,6 +5,7 @@ import mortor from "../public/parts/mortor.jpg"
 import controller from "../public/parts/controller.jpg"
 import propeller from "../public/parts/propeller.jpg"
 import battery from "../public/parts/battery.jpg"
+import { Reveal } from "./Animations";
 
 const features = [
     {
@@ -35,14 +36,18 @@ const features = [
 
 export default function DronePartsSection() {
     return (
-        <section className="bg-brand-bg-pink px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+        <section className="bg-brand-bg-warm px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="max-w-155">
-                    <p className="inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black"> Drone Parts </p>
-                    <h2 className="mb-8 text-4xl font-black leading-tight text-black md:mb-12 md:text-6xl">
-                        Why Choose Our Parts
-                    </h2>
+                    <Reveal delay={100}>
+                        <p className="inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black"> Drone Parts </p>
+                    </Reveal>
+                    <Reveal delay={200}>
+                        <h2 className="mb-8 text-4xl font-black leading-tight text-black md:mb-12 md:text-6xl">
+                            Precision Engineered Components
+                        </h2>
+                    </Reveal>
                 </div>
 
                 {/* Grid */}
@@ -50,8 +55,9 @@ export default function DronePartsSection() {
                     {features.map((item, index) => {
                         const Icon = item.icon;
                         return (
-                            <div
+                            <Reveal
                                 key={index}
+                                delay={300 + index * 100}
                                 className="flex flex-col gap-4 bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden"
                             >
                                 {/* Image */}
@@ -77,35 +83,34 @@ export default function DronePartsSection() {
                                         <Icon size={18} />
                                     </div>
                                 </div>
-                            </div>
+                            </Reveal>
                         );
                     })}
                 </div>
 
                 {/* Extra Details Section */}
                 <div className="mt-16 grid md:grid-cols-2 gap-10">
-                    <div>
-                        <h3 className="mb-4 text-2xl font-bold text-neutral-900">
-                            Premium Drone Components
-                        </h3>
-                        <p className="leading-relaxed text-neutral-500">
-                            Our drone spare parts are carefully selected to ensure durability,
-                            performance, and compatibility. Whether you&apos;re repairing or
-                            upgrading, we provide reliable components that meet industry
-                            standards.
-                        </p>
-                    </div>
+                    <Reveal delay={100}>
+                        <div>
+                            <h3 className="mb-4 text-2xl font-bold text-neutral-900">
+                                Premium Drone Components
+                            </h3>
+                            <p className="leading-relaxed text-neutral-500">
+                                All components are tested for durability, efficiency, and mission reliability under extreme conditions. Built to meet defense-grade standards.
+                            </p>
+                        </div>
+                    </Reveal>
 
-                    <div>
-                        <h3 className="mb-4 text-2xl font-bold text-neutral-900">
-                            Fast Support & Delivery
-                        </h3>
-                        <p className="leading-relaxed text-neutral-500">
-                            Need help choosing the right part? Our support team is ready to
-                            assist. We also ensure fast shipping so you can get your drone back
-                            in the air quickly.
-                        </p>
-                    </div>
+                    <Reveal delay={200}>
+                        <div>
+                            <h3 className="mb-4 text-2xl font-bold text-neutral-900">
+                                Rapid Deployment Support
+                            </h3>
+                            <p className="leading-relaxed text-neutral-500">
+                                Our team ensures quick technical assistance and fast delivery to keep your operations uninterrupted.
+                            </p>
+                        </div>
+                    </Reveal>
                 </div>
             </div>
         </section>
