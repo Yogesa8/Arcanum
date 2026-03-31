@@ -12,6 +12,7 @@ import DroneFAQ from "@/components/Faq";
 import Footer from "@/components/Footer";
 import ContactDetails from "@/components/ContactDetails";
 import MilitaryGallery from "@/components/MilitaryGallery";
+import DronesSection from "@/components/DronesSection";
 
 
 export default function Home() {
@@ -21,17 +22,18 @@ export default function Home() {
         <Header />
         <div>
           <HeroSection />
-          <KeyFeaturesSection/>
+          <TrustedBy />
+          <KeyFeaturesSection />
           <FeatureCarousel />
-          <MilitaryGallery/>
-          <TeamSection/>
-          <DronePartsSection/>
-          <ContactSection/>
+          <DronesSection />
+          <MilitaryGallery />
+          <DronePartsSection />
+          <TeamSection />
           <ClientVoices />
-          <TrustedBy/>
-          <DroneFAQ/>
-          <ContactDetails/>
-          <Footer/>
+          <DroneFAQ />
+          <ContactSection />
+          <ContactDetails />
+          <Footer />
         </div>
       </div>
     </main>

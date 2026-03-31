@@ -5,40 +5,41 @@ import stablity from "../public/features/superior.jpg"
 import Gen_camera from "../public/features/gen_camera.jpg"
 import Controls from "../public/features/controls.jpg"
 import battery from "../public/features/battery.jpg"
+import { Reveal } from "./Animations";
 
 
 // Data Configuration for the features
 const featuresData = [
   {
     id: 1,
-    title: "Superior Stability",
-    shortDesc: "Advanced gimbal technology.",
+    title: "Advanced Flight Stabilization",
+    shortDesc: "Mission-grade stability system",
     fullDesc:
-      "Capture steady footage even in high winds with our 3-axis stabilization system.",
+      "Engineered for high-risk environments, our 3-axis stabilization ensures precise control and steady surveillance even in strong winds and harsh conditions.",
     img: stablity,
   },
   {
     id: 2,
-    title: "Next Gen Camera",
-    shortDesc: "8K resolution recording.",
+    title: "High-Resolution ISR Camera",
+    shortDesc: "4K/8K ISR imaging system",
     fullDesc:
-      "Professional-grade sensor captures every detail with stunning dynamic range.",
+      "Equipped with Intelligence, Surveillance, and Reconnaissance (ISR) capabilities, delivering ultra-clear imagery with enhanced zoom, night vision, and thermal support.",
     img: Gen_camera,
   },
   {
     id: 3,
-    title: "Intuitive Controls",
-    shortDesc: "Effortless pilot experience.",
+    title: "AI-Assisted Navigation",
+    shortDesc: "Autonomous mission control",
     fullDesc:
-      "Effortless controls for seamless flight, designed for beginners and pros alike.",
+      "AI-powered navigation with obstacle avoidance, waypoint planning, and real-time decision-making for fully autonomous mission execution.",
     img: Controls,
   },
   {
     id: 4,
-    title: "Extended Battery",
-    shortDesc: "Up to 45 mins flight.",
+    title: "Long-Endurance Flight System",
+    shortDesc: "Extended operational time",
     fullDesc:
-      "Industry-leading battery life keeps you in the air longer for the perfect shot.",
+      "Optimized power systems deliver extended flight duration, enabling long-range missions without frequent downtime or battery swaps.",
     img: battery,
   },
 ];
@@ -52,30 +53,33 @@ export default function KeyFeaturesSection() {
         {/* LEFT */}
         <div className="w-full md:w-[35%]">
 
-          <span className="inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black">
-            Key Features
-          </span>
+          <Reveal delay={100}>
+            <span className="inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black">
+              Tactical Capabilities
+            </span>
+          </Reveal>
 
-          <h2 className="mb-8 font-black leading-tight text-black text-4xl md:mb-12 md:text-6xl">
-            Unmatched <br />
-            Performance <br />
-            Ahead
-          </h2>
+          <Reveal delay={200}>
+            <h2 className="mb-8 font-black leading-tight text-black text-4xl md:mb-12 md:text-6xl">
+              Mission-Grade <br /> Performance
+            </h2>
+          </Reveal>
 
           {/* menu */}
           <div className="border-t border-gray-300">
-            {featuresData.map((feature) => (
-              <button
-                key={feature.id}
-                onClick={() => setActiveFeature(feature)}
-                className={`w-full text-left py-4 md:py-6 text-lg md:text-2xl border-b border-gray-300 transition
-                ${activeFeature.id === feature.id
-                    ? "text-black"
-                    : "text-gray-400 hover:text-gray-600"
-                  }`}
-              >
-                {feature.title}
-              </button>
+            {featuresData.map((feature, index) => (
+              <Reveal key={feature.id} delay={300 + index * 100}>
+                <button
+                  onClick={() => setActiveFeature(feature)}
+                  className={`w-full text-left py-4 md:py-6 text-lg md:text-2xl border-b border-gray-300 transition
+                  ${activeFeature.id === feature.id
+                      ? "text-black"
+                      : "text-gray-400 hover:text-gray-600"
+                    }`}
+                >
+                  {feature.title}
+                </button>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -83,7 +87,7 @@ export default function KeyFeaturesSection() {
         {/* RIGHT SIDE */}
         <div className="w-full md:w-[55%]">
           {/* image box */}
-          <div className="relative w-full h-70  md:h-105 overflow-hidden ">
+          <Reveal delay={400} className="relative w-full h-70  md:h-105 overflow-hidden ">
             <Image
               key={activeFeature.id}
               src={activeFeature.img}
@@ -101,17 +105,21 @@ export default function KeyFeaturesSection() {
                   after:bg-transparent after:rounded-bl-[20px] sm:after:rounded-bl-[30px] after:shadow-[-8px_8px_0_8px_var(--brand-bg-pink)] sm:after:shadow-[-10px_10px_0_10px_var(--brand-bg-pink)]
                 "
             ></div>
-          </div>
+          </Reveal>
 
           {/* TEXT */}
           <div className="mt-6 md:mt-10">
-            <h3 className="text-2xl md:text-3xl font-semibold mb-2">
-              {activeFeature.title}
-            </h3>
+            <Reveal delay={500}>
+              <h3 className="text-2xl md:text-3xl font-semibold mb-2">
+                {activeFeature.title}
+              </h3>
+            </Reveal>
 
-            <p className="text-base leading-relaxed text-neutral-500">
-               {activeFeature.fullDesc}
-             </p>
+            <Reveal delay={600}>
+              <p className="text-base leading-relaxed text-neutral-500">
+                {activeFeature.fullDesc}
+              </p>
+            </Reveal>
           </div>
         </div>
       </div>

@@ -16,9 +16,9 @@ import {
 import header from "../public/header.jpg"
 
 const navLinks = [
-  { label: "Features", href: "/features" },
-  { label: "Drone", href: "/drone" },
-  { label: "Accessories", href: "/accessories" },
+  { label: "Capabilities", href: "/features" },
+  { label: "Solutions", href: "/drone" },
+  { label: "Components", href: "/accessories" },
   { label: "About", href: "/about" },
 ];
 

@@ -3,6 +3,7 @@ import image1 from "../public/gallary/gallary1.jpg"
 import image2 from "../public/gallary/gallary2.jpg"
 import image3 from "../public/gallary/gallary3.jpg"
 import image4 from "../public/gallary/gallary4.jpg"
+import { Reveal } from './Animations'
 
 const MilitaryGallery = () => {
     return (
@@ -11,17 +12,21 @@ const MilitaryGallery = () => {
 
                 {/* Header */}
                 <div className="max-w-155">
-                    <p className="inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black"> Showcase </p>
-                    <h2 className="mb-8 text-4xl font-black leading-tight md:mb-12 md:text-6xl">
-                        Perspectives
-                    </h2>
+                    <Reveal delay={100}>
+                        <p className="inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black"> Operational Scenarios </p>
+                    </Reveal>
+                    <Reveal delay={200}>
+                        <h2 className="mb-8 text-4xl font-black leading-tight md:mb-12 md:text-6xl">
+                            Mission Use Cases
+                        </h2>
+                    </Reveal>
                 </div>
 
                 {/* Grid Layout */}
                 <div className="grid grid-cols-1 gap-6">
 
                     {/* Large Image */}
-                    <div className="relative group overflow-hidden rounded-2xl">
+                    <Reveal delay={300} className="relative group overflow-hidden rounded-2xl">
                         <Image
                             src={image1}
                             alt="military helicopter"
@@ -29,15 +34,15 @@ const MilitaryGallery = () => {
                         />
 
                         <div className="absolute bottom-4 left-4 text-white text-sm bg-black/40 px-3 py-1 rounded-md backdrop-blur">
-                            Recon Aerial View
+                            Aerial Reconnaissance
                         </div>
-                    </div>
+                    </Reveal>
 
                     {/* Bottom Images */}
                     <div className="grid md:grid-cols-2 gap-6">
 
                         {/* Left Image */}
-                        <div className="relative group overflow-hidden rounded-2xl">
+                        <Reveal delay={400} className="relative group overflow-hidden rounded-2xl">
                             <Image
                                 src={image4}
                                 alt="military soldiers"
@@ -45,12 +50,12 @@ const MilitaryGallery = () => {
                             />
 
                             <div className="absolute bottom-4 left-4 text-white text-sm bg-black/40 px-3 py-1 rounded-md backdrop-blur">
-                                Tactical Unit
+                                Ground Force Support
                             </div>
-                        </div>
+                        </Reveal>
 
                         {/* Right Image */}
-                        <div className="relative group overflow-hidden rounded-2xl">
+                        <Reveal delay={500} className="relative group overflow-hidden rounded-2xl">
                             <Image
                                 src={image3}
                                 alt="fighter jet"
@@ -58,9 +63,9 @@ const MilitaryGallery = () => {
                             />
 
                             <div className="absolute bottom-4 left-4 text-white text-sm bg-black/40 px-3 py-1 rounded-md backdrop-blur">
-                                Air Support
+                                Airspace Monitoring
                             </div>
-                        </div>
+                        </Reveal>
 
                     </div>
 
