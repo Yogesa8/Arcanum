@@ -50,7 +50,7 @@ export default function DroneFAQ() {
      };
 
      return (
-          <section className="bg-brand-bg-warm px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+          <section className="bg-brand-bg-pink  px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
                <div className="max-w-7xl mx-auto">
 
                     {/* Top Label */}

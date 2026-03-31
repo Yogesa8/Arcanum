@@ -33,7 +33,7 @@ export default function TeamSection() {
     });
 
     return (
-        <section className="overflow-hidden h-full bg-brand-bg-pink px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+        <section className="overflow-hidden h-full bg-brand-bg-pink  px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
             <div className="max-w-7xl mx-auto">
                 <div className="max-w-155">
                     <Reveal delay={100}>

@@ -93,7 +93,7 @@ function ArrowBadge() {
     <div className="absolute bottom-0 right-0 z-20">
       <div className="relative h-12.5 w-12.5 sm:h-15 sm:w-[60px] lg:h-[70px] lg:w-[70px] rounded-tl-[20px] sm:rounded-tl-[24px] lg:rounded-tl-[30px] bg-brand-bg-warm p-1.5 sm:p-2">
         {/* Arrow */}
-        <div className="flex h-full w-full items-center justify-center rounded-full bg-orange-500 transition-transform duration-300 ">
+        <div className="flex h-full w-full items-center justify-center rounded-full bg-brand-primary hover:bg-brand-primary-dark transition-transform duration-300 ">
           <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
         </div>
         {/* Curves */}
@@ -143,6 +143,7 @@ const DronesSection = () => {
                     alt={card.title}
                     fill
                     loading="eager"
+                    sizes="(max-width: 1279px) 100vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   {/* Overlay */}

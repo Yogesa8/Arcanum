@@ -29,12 +29,12 @@ const testimonials = [
 
 function QuoteBadge() {
   return (
-    <div className="absolute right-0 top-0 z-20 h-15 w-15 rounded-bl-[30px] bg-brand-bg-pink pl-2.5 pb-2.5">
+    <div className="absolute right-0 top-0 z-20 h-15 w-15 rounded-bl-[30px] bg-brand-bg-warm pl-2.5 pb-2.5">
       <div className="flex h-full w-full items-center justify-center rounded-full bg-brand-primary text-black">
         <Quote className="h-5 w-5 fill-current stroke-2 text-white" />
       </div>
-      <div className="absolute -left-5 top-0 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_var(--brand-bg-pink)]" />
-      <div className="absolute right-0 top-15 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_var(--brand-bg-pink)]" />
+      <div className="absolute -left-5 top-0 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_var(--brand-bg-warm)]" />
+      <div className="absolute right-0 top-15 h-5 w-5 rounded-tr-[30px] bg-transparent shadow-[3px_-5px_0_3px_var(--brand-bg-warm)]" />
     </div>
   );
 }
@@ -80,6 +80,7 @@ export default function ClientVoices() {
                       src={item.image}
                       alt={item.name}
                       fill
+                      loading="eager"
                       sizes="(max-width: 1279px) 100vw, 33vw"
                       className={`object-cover ${item.imageClassName ?? ""}`}
                     />
