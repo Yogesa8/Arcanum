@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone, Menu } from "lucide-react";
 
@@ -13,7 +13,8 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import header from "../public/header.jpg"
+
+import header from "../public/header.jpg";
 
 const navLinks = [
   { label: "Capabilities", href: "/features" },
@@ -24,12 +25,13 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="absolute z-20 w-full px-5 pt-5 sm:px-8 md:px-10">
-      <div className="mx-auto w-full flex items-center justify-between rounded-full bg-white px-6 py-4 shadow-sm">
+    <header className="absolute z-20 w-full px-4 pt-4 sm:px-6 md:px-8">
+      <div className="mx-auto w-full flex items-center justify-between rounded-full bg-white px-4 sm:px-6 py-3 shadow-sm">
+
         {/* LEFT */}
-        <div className="flex items-center gap-4 sm:gap-10">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="h-10 w-10 overflow-hidden rounded-full bg-slate-900">
+        <div className="flex items-center gap-3 sm:gap-6">
+          <Link href="/" className="flex items-center gap-2">
+            <div className="h-8 w-8 sm:h-10 sm:w-10 overflow-hidden rounded-full bg-slate-900">
               <Image
                 src={header}
                 alt="logo"
@@ -38,22 +40,22 @@ export default function Header() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <span className="text-lg font-extrabold text-slate-900">
+            <span className="text-base sm:text-lg font-extrabold text-slate-900">
               Techie
             </span>
           </Link>
 
-          {/* DESKTOP NAV */}
-          <nav className="hidden md:flex items-center gap-10">
+          {/* NAV (>=768px) */}
+          <nav className="hidden md:flex items-center gap-6 lg:gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 className="relative text-sm font-semibold text-slate-900 
-                 after:content-[''] after:absolute after:left-0 after:-bottom-1
-                 after:h-[2px] after:w-0 after:bg-brand-primary-dark
-                 after:transition-all after:duration-300 after:ease-in-out
-                 hover:after:w-full hover:text-brand-primary-dark"
+                after:content-[''] after:absolute after:left-0 after:-bottom-1
+                after:h-0.5 after:w-0 after:bg-brand-primary-dark
+                after:transition-all after:duration-300
+                hover:after:w-full hover:text-brand-primary-dark"
               >
                 {link.label}
               </Link>
@@ -61,18 +63,22 @@ export default function Header() {
           </nav>
         </div>
 
-        {/* RIGHT DESKTOP */}
-        <div className="hidden md:flex items-center gap-5">
-          <Phone size={18} />
-          <Mail size={18} />
-          <MapPin size={18} />
+        {/* RIGHT (>=768px) */}
+        <div className="hidden md:flex items-center gap-4">
+          
+          {/* Icons only on large screens */}
+          <div className="hidden lg:flex items-center gap-4">
+            <Phone size={18} />
+            <Mail size={18} />
+            <MapPin size={18} />
+          </div>
 
-          <button className="rounded-full bg-brand-primary px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-brand-primary-dark active:scale-95">
+          <button className="rounded-full bg-brand-primary px-5 lg:px-8 py-2 lg:py-3 text-sm font-semibold text-white transition-all hover:bg-brand-primary-dark active:scale-95">
             Shop Now
           </button>
         </div>
 
-        {/* MOBILE DRAWER */}
+        {/* MOBILE (<768px) */}
         <div className="md:hidden">
           <Drawer>
             <DrawerTrigger asChild>
@@ -117,6 +123,7 @@ export default function Header() {
             </DrawerContent>
           </Drawer>
         </div>
+
       </div>
     </header>
   );

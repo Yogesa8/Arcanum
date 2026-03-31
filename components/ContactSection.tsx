@@ -75,11 +75,11 @@ export default function ContactSection() {
           />
           <div
             aria-hidden="true"
-            className="absolute bottom-14.5 left-0 z-20 h-5 w-5 rounded-bl-[20px] bg-transparent shadow-[-10px_10px_0_10px_var(--brand-bg-subtle)]"
+            className="absolute bottom-14.5 left-0 z-20 h-5 w-5 rounded-bl-[20px] bg-transparent shadow-[-10px_10px_0_10px_var(--brand-bg-warm)]"
           />
           <div
             aria-hidden="true"
-            className="absolute bottom-0 left-42 z-20 h-5 w-5 rounded-bl-[20px] bg-transparent shadow-[-10px_10px_0_10px_var(--brand-bg-subtle)]"
+            className="absolute bottom-0 left-42 z-20 h-5 w-5 rounded-bl-[20px] bg-transparent shadow-[-10px_10px_0_10px_var(--brand-bg-warm)]"
           />
         </div>
       </div>
