@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { BadgeQuestionMark, ChevronDown } from "lucide-react";
 import { Reveal } from "./Animations";
 
 const faqs = [
@@ -86,7 +86,7 @@ export default function DroneFAQ() {
                                         <div className="flex items-center gap-4">
 
                                              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary text-white">
-                                                  ?
+                                                  <BadgeQuestionMark strokeWidth={1.5} />
                                              </div>
 
                                              <h3 className="text-lg font-bold text-neutral-900">
