@@ -66,6 +66,7 @@ export default function DronePartsSection() {
                                         src={item.image}
                                         alt={item.title}
                                         fill
+                                        loading="eager"
                                         sizes="(max-width: 1279px) 100vw, 33vw"
                                         className="object-cover"
                                     />

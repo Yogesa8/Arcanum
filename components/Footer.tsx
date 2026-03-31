@@ -5,7 +5,7 @@ import { Reveal } from "./Animations";
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-primary text-white pt-16 pb-8">
+    <footer className="bg-brand-primary-dark text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Grid */}

@@ -71,47 +71,47 @@ export default function FeatureCarousel() {
   };
 
   return (
-    <section className="relative w-full bg-brand-bg-warm px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
-      <div className="mx-auto">
-      {/* Navigation buttons - positioned top-right like reference */}
-      <Reveal delay={100} className="absolute border rounded-full right-6 top-6 md:right-10 md:top-10 flex z-20">
-        <button
-          onClick={() => scroll("left")}
-          className="
-            flex h-10 w-10 items-center justify-center
-            rounded-full border-0
-            bg-transparent text-black backdrop-blur-sm
-            transition hover:bg-white hover:shadow-md
-            active:scale-95
-          "
-          aria-label="Scroll left"
-        >
-          <span className="text-xl font-light"><ChevronLeft /></span>
-        </button>
-        <button
-          onClick={() => scroll("right")}
-          className="
-            flex h-10 w-10 items-center justify-center
-            rounded-full border-0
-            bg-transparent text-black backdrop-blur-sm
-            transition hover:bg-white hover:shadow-md
-            active:scale-95
-          "
-          aria-label="Scroll right"
-        >
-          <span className="text-xl font-light"><ChevronRight /></span>
-        </button>
-      </Reveal>
-
-      {/* Cards container */}
-      <div
-        ref={scrollRef}
-        className="h-auto md:h-auto lg:h-auto flex gap-8 md:gap-10 overflow-x-auto py-6 px-6 md:px-16 lg:px-20 scroll-smooth snap-x snap-mandatory no-scrollbar " >
-        {cards.map((card, i) => (
-          <Reveal
-            key={i}
-            delay={200 + i * 100}
+    <section className="relative w-full bg-brand-bg-pink  px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+      <div className="h-130 mx-auto">
+        {/* Navigation buttons - positioned top-right like reference */}
+        <Reveal delay={100} className="absolute border rounded-full right-6 top-6 md:right-10 md:top-10 flex z-20">
+          <button
+            onClick={() => scroll("left")}
             className="
+            flex h-10 w-10 items-center justify-center
+            rounded-full border-0
+            bg-transparent text-black backdrop-blur-sm
+            transition hover:bg-white hover:shadow-md
+            active:scale-95
+          "
+            aria-label="Scroll left"
+          >
+            <span className="text-xl font-light"><ChevronLeft /></span>
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            className="
+            flex h-10 w-10 items-center justify-center
+            rounded-full border-0
+            bg-transparent text-black backdrop-blur-sm
+            transition hover:bg-white hover:shadow-md
+            active:scale-95
+          "
+            aria-label="Scroll right"
+          >
+            <span className="text-xl font-light"><ChevronRight /></span>
+          </button>
+        </Reveal>
+
+        {/* Cards container */}
+        <div
+          ref={scrollRef}
+          className="h-full md:h-full lg:h-full flex gap-8 md:gap-10 overflow-x-auto py-6 px-6 md:px-16 lg:px-20 scroll-smooth snap-x snap-mandatory no-scrollbar " >
+          {cards.map((card, i) => (
+            <Reveal
+              key={i}
+              delay={200 + i * 100}
+              className="
               group
               relative
               min-w-65 sm:min-w-75 md:min-w-80
@@ -123,38 +123,39 @@ export default function FeatureCarousel() {
               hover:scale-[1.04] 
               snap-center
             "
-          >
-            {/* Image - visible by default */}
-            <Image
-              src={card.image}
-              alt={card.title}
-              fill
-              sizes="(max-width: 1279px) 100vw, 33vw"
-              className="object-cover brightness-[0.85] transition-all duration-500 group-hover:brightness-100"
-              priority={i < 2}
-            />
+            >
+              {/* Image - visible by default */}
+              <Image
+                src={card.image}
+                alt={card.title}
+                fill
+                loading="eager"
+                sizes="(max-width: 1279px) 100vw, 33vw"
+                className="object-cover brightness-[0.85] transition-all duration-500 group-hover:brightness-100"
+                priority={i < 2}
+              />
 
-            {/* Overlay - dark by default, lighter on hover */}
-            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 group-hover:from-black/60 group-hover:via-black/25"
-            />
+              {/* Overlay - dark by default, lighter on hover */}
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 group-hover:from-black/60 group-hover:via-black/25"
+              />
 
-            {/* Text content */}
-            <div className="absolute inset-x-0 bottom-0 p-8 text-white z-10">
-              <h3 className="mb-3 text-2xl font-black tracking-tight md:text-3xl">
-                {card.title}
-              </h3>
-              <p className="mb-6 text-base leading-relaxed text-white/90 md:text-lg">
-                {card.desc}
-              </p>
-              <button
-                className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-2.5 text-sm font-semibold transition-all hover:bg-white/10 active:scale-95"
-              >
-                Learn More →
-              </button>
-            </div>
-          </Reveal>
-        ))}
-      </div>
+              {/* Text content */}
+              <div className="absolute inset-x-0 bottom-0 p-8 text-white z-10">
+                <h3 className="mb-3 text-2xl font-black tracking-tight md:text-3xl">
+                  {card.title}
+                </h3>
+                <p className="mb-6 text-base leading-relaxed text-white/90 md:text-lg">
+                  {card.desc}
+                </p>
+                <button
+                  className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-2.5 text-sm font-semibold transition-all hover:bg-white/10 active:scale-95"
+                >
+                  Learn More →
+                </button>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -30,6 +30,8 @@ const MilitaryGallery = () => {
                         <Image
                             src={image1}
                             alt="military helicopter"
+                            loading="eager"
+                            sizes="(max-width: 1279px) 100vw, 33vw"
                             className="w-full h-[420px] object-cover transition duration-500 group-hover:scale-105"
                         />
 
@@ -46,6 +48,8 @@ const MilitaryGallery = () => {
                             <Image
                                 src={image4}
                                 alt="military soldiers"
+                                loading="eager"
+                                sizes="(max-width: 1279px) 100vw, 33vw"
                                 className="w-full h-[300px] object-cover transition duration-500 group-hover:scale-105"
                             />
 
@@ -59,6 +63,8 @@ const MilitaryGallery = () => {
                             <Image
                                 src={image3}
                                 alt="fighter jet"
+                                loading="eager"
+                                sizes="(max-width: 1279px) 100vw, 33vw"
                                 className="w-full h-[300px] object-cover transition duration-500 group-hover:scale-105"
                             />
 

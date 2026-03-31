@@ -4,7 +4,7 @@ import { Reveal } from "./Animations";
 
 const ContactDetails = () => {
   return (
-    <section className="bg-brand-bg-pink px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
+    <section className="bg-brand-bg-pink  px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Side - Contact Info */}
