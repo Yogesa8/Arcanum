@@ -1,74 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import Image, { StaticImageData } from "next/image";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "./Animations";
-import DroneViewer from "./DroneViewer";
-
-import drone1 from "../public/drone/drone1.jpg";
-import drone2 from "../public/drone/drone2.jpg";
-import drone3 from "../public/drone/drone3.jpg";
-
-type Card = {
-  tag: string;
-  title: string;
-  description: string;
-  specs: {
-    speed: string;
-    flightTime: string;
-    camera: string;
-    range: string;
-  };
-  variant?: "light" | "teal" | "dark";
-  bgImage: StaticImageData;
-  modelUrl: string;
-};
-
-const cards: Card[] = [
-  {
-    tag: "Recon-X Surveillance",
-    title: "Long-range reconnaissance drone for real-time intelligence gathering.",
-    description: "The Recon-X is our premier surveillance platform, engineered for extended duration flights and high-altitude monitoring. It utilizes advanced AI to detect and track movement across vast distances, providing real-time data to command centers.",
-    specs: {
-      speed: "85 km/h",
-      flightTime: "90 min",
-      camera: "8K ISR / Night Vision",
-      range: "25 km",
-    },
-    bgImage: drone1,
-    variant: "light",
-    modelUrl: "/drone.glb",
-  },
-  {
-    tag: "Falcon Strike UAV",
-    title: "High-speed tactical drone designed for rapid deployment.",
-    description: "Built for speed and precision, the Falcon Strike is a tactical UAV designed to reach target locations in minutes. Its compact frame allows for agile maneuvering in urban environments where larger aircraft cannot operate.",
-    specs: {
-      speed: "140 km/h",
-      flightTime: "35 min",
-      camera: "4K Tactical Precision",
-      range: "12 km",
-    },
-    bgImage: drone2,
-    variant: "teal",
-    modelUrl: "/drone.glb",
-  },
-  {
-    tag: "Sentinel Pro Drone",
-    title: "AI-powered autonomous drone for border and perimeter security.",
-    description: "The Sentinel Pro is a persistent security platform. It is designed to operate autonomously along pre-defined perimeters, using thermal imaging and multi-spectral sensors to secure critical infrastructure and national borders.",
-    specs: {
-      speed: "60 km/h",
-      flightTime: "120 min",
-      camera: "Thermal + LiDAR",
-      range: "40 km",
-    },
-    bgImage: drone3,
-    variant: "dark",
-    modelUrl: "/drone.glb",
-  },
-];
+import { drones } from "../lib/drones";
 
 const styles = {
   light: {
@@ -105,9 +41,7 @@ function ArrowBadge() {
 }
 
 const DronesSection = () => {
-  const [selectedDroneIdx, setSelectedDroneIdx] = useState<number | null>(null);
-
-  const activeDrone = selectedDroneIdx !== null ? cards[selectedDroneIdx] : null;
+  const router = useRouter();
 
   return (
     <section className="bg-brand-bg-warm px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
@@ -128,13 +62,13 @@ const DronesSection = () => {
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {cards.map((card, i) => {
+          {drones.map((card, i) => {
             const variant = styles[card.variant || "light"];
 
             return (
               <Reveal key={i} delay={100 + i * 100}>
                 <article 
-                  onClick={() => setSelectedDroneIdx(i)}
+                  onClick={() => router.push(`/drones/${card.slug}`)}
                   className="group relative cursor-pointer overflow-hidden rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] min-h-[260px] sm:min-h-[320px] lg:min-h-[380px] flex flex-col justify-between"
                 >
                   {/* Image layer */}
@@ -168,17 +102,6 @@ const DronesSection = () => {
           })}
         </div>
       </div>
-
-      {/* 3D Drone Viewer Overlay */}
-      {activeDrone && (
-        <DroneViewer
-          name={activeDrone.tag}
-          description={activeDrone.description}
-          specs={activeDrone.specs}
-          modelUrl={activeDrone.modelUrl}
-          onClose={() => setSelectedDroneIdx(null)}
-        />
-      )}
     </section>
   );
 };

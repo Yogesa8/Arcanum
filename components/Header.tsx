@@ -45,8 +45,8 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* NAV (>=768px) */}
-          <nav className="hidden md:flex items-center gap-6 lg:gap-10">
+          {/* NAV (>=1024px) */}
+          <nav className="hidden lg:flex items-center gap-6 lg:gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
@@ -63,11 +63,11 @@ export default function Header() {
           </nav>
         </div>
 
-        {/* RIGHT (>=768px) */}
-        <div className="hidden md:flex items-center gap-4">
+        {/* RIGHT (>=1024px) */}
+        <div className="hidden lg:flex items-center gap-4">
           
           {/* Icons only on large screens */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="flex items-center gap-4">
             <Phone size={18} />
             <Mail size={18} />
             <MapPin size={18} />
@@ -78,11 +78,14 @@ export default function Header() {
           </button>
         </div>
 
-        {/* MOBILE (<768px) */}
-        <div className="md:hidden">
+        {/* MOBILE & TABLET (<1024px) */}
+        <div className="lg:hidden flex items-center gap-4">
+           <button className="rounded-full bg-brand-primary px-4 py-1.5 text-xs font-semibold text-white transition-all hover:bg-brand-primary-dark active:scale-95 sm:px-6 sm:py-2 sm:text-sm">
+            Shop Now
+          </button>
           <Drawer>
             <DrawerTrigger asChild>
-              <button>
+              <button className="p-1 rounded-md hover:bg-slate-100 transition-colors">
                 <Menu size={26} />
               </button>
             </DrawerTrigger>
