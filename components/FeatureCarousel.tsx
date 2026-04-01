@@ -106,7 +106,7 @@ export default function FeatureCarousel() {
         {/* Cards container */}
         <div
           ref={scrollRef}
-          className="h-full md:h-full lg:h-full flex gap-8 md:gap-10 overflow-x-auto py-6 px-6 md:px-16 lg:px-20 scroll-smooth snap-x snap-mandatory no-scrollbar " >
+          className="h-full md:h-full lg:h-full flex gap-8 md:gap-10 overflow-x-auto py-6 px-0 scroll-smooth snap-x snap-mandatory no-scrollbar " >
           {cards.map((card, i) => (
             <Reveal
               key={i}
@@ -120,7 +120,6 @@ export default function FeatureCarousel() {
               bg-gray-950
               border-gray-800/60
               transition-transform duration-400 ease-out
-              hover:scale-[1.04] 
               snap-center
             "
             >
@@ -131,7 +130,7 @@ export default function FeatureCarousel() {
                 fill
                 loading="eager"
                 sizes="(max-width: 1279px) 100vw, 33vw"
-                className="object-cover brightness-[0.85] transition-all duration-500 group-hover:brightness-100"
+                className="object-cover brightness-[0.85] transition-all duration-500 group-hover:brightness-100 group-hover:scale-110"
                 priority={i < 2}
               />
 

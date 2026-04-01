@@ -48,7 +48,7 @@ export default function KeyFeaturesSection() {
   const [activeFeature, setActiveFeature] = useState(featuresData[0]);
   return (
     <section className="bg-brand-bg-warm px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row gap-10 md:gap-20">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20">
 
         {/* LEFT */}
         <div className="w-full md:w-[35%]">
@@ -60,8 +60,8 @@ export default function KeyFeaturesSection() {
           </Reveal>
 
           <Reveal delay={200}>
-            <h2 className="mb-8 font-black leading-tight text-black text-4xl md:mb-12 md:text-6xl">
-              Mission-Grade <br /> Performance
+            <h2 className="mb-8 text-4xl font-black leading-tight text-black md:mb-12 md:text-6xl">
+              Mission-Grade <br className="hidden md:block" /> Performance
             </h2>
           </Reveal>
 

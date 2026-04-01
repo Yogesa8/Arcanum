@@ -79,7 +79,7 @@ export default function Header() {
         </div>
 
         {/* MOBILE & TABLET (<1024px) */}
-        <div className="lg:hidden flex items-center gap-4">
+        <div className="lg:hidden flex items-center gap-2 sm:gap-4">
            <button className="rounded-full bg-brand-primary px-4 py-1.5 text-xs font-semibold text-white transition-all hover:bg-brand-primary-dark active:scale-95 sm:px-6 sm:py-2 sm:text-sm">
             Shop Now
           </button>

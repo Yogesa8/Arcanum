@@ -29,7 +29,7 @@ export default function ContactSection() {
           <div className="relative z-10 px-4 py-12 sm:px-8 md:px-14 md:py-16 lg:px-19.5 lg:py-24">
             <Reveal delay={100} className="mx-auto flex min-h-135 max-w-331.25 flex-col items-center rounded-[34px] bg-white px-6 py-12 shadow-[0_20px_60px_rgba(0,0,0,0.08)] sm:px-10 md:px-16 md:py-16 lg:px-24 lg:py-23">
               <Reveal delay={200}>
-                <div className="mb-7 inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold text-black">
+                <div className="mb-7 inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black">
                   Get In Touch
                 </div>
               </Reveal>
