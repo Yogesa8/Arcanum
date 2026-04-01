@@ -85,11 +85,11 @@ export default function DroneFAQ() {
                                         {/* Left Icon + Question */}
                                         <div className="flex items-center gap-4">
 
-                                             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary text-white">
+                                             <div className="flex h-8 w-8 sm:h-10 sm:w-10   items-center justify-center rounded-full bg-brand-primary text-white">
                                                   <BadgeQuestionMark strokeWidth={1.5} />
                                              </div>
 
-                                             <h3 className="text-lg font-bold text-neutral-900">
+                                             <h3 className="text-sm sm:text-lg font-bold text-neutral-900">
                                                   {faq.question}
                                              </h3>
                                         </div>
