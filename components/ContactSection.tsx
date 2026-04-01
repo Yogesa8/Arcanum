@@ -71,7 +71,7 @@ export default function ContactSection() {
 
           <div
             aria-hidden="true"
-            className="absolute bottom-0 left-0 z-20 h-14.5 w-42 rounded-tr-[30px] bg-brand-bg-subtle"
+            className="absolute bottom-0 left-0 z-20 h-14.5 w-42 rounded-tr-[30px] bg-brand-bg-warm"
           />
           <div
             aria-hidden="true"
