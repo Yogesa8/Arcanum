@@ -21,7 +21,7 @@ export default function HeroSection() {
         <div className="flex flex-col justify-between px-5 py-8 sm:px-10 sm:py-10 lg:px-16 lg:py-16">
           <div className="mt-8 max-w-140">
             <Reveal delay={200}>
-              <h1 className="max-w-130 text-5xl font-black leading-[0.95] tracking-tight text-black sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-130 text-4xl font-black leading-[0.95] tracking-tight text-black sm:text-6xl lg:text-7xl">
                 Command the Skies with Precision
               </h1>
             </Reveal>

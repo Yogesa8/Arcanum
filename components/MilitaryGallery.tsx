@@ -16,7 +16,7 @@ const MilitaryGallery = () => {
                         <p className="inline-flex rounded-full border border-brand-secondary px-5 py-2 text-sm font-semibold tracking-[-0.02em] text-black"> Operational Scenarios </p>
                     </Reveal>
                     <Reveal delay={200}>
-                        <h2 className="mb-8 text-4xl font-black leading-tight md:mb-12 md:text-6xl">
+                        <h2 className="mb-8 text-4xl font-black leading-tight text-black md:mb-12 md:text-6xl">
                             Mission Use Cases
                         </h2>
                     </Reveal>

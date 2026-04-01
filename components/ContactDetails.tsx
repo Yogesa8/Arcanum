@@ -10,7 +10,7 @@ const ContactDetails = () => {
           {/* Left Side - Contact Info */}
           <div>
             <Reveal delay={100}>
-                <h2 className="mb-6 text-4xl font-black md:text-5xl">
+                <h2 className="mb-8 text-4xl font-black leading-tight text-black md:mb-12 md:text-6xl">
                 Get in Touch
                 </h2>
             </Reveal>

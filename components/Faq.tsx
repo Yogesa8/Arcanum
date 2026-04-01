@@ -62,7 +62,7 @@ export default function DroneFAQ() {
                          </Reveal>
                          {/* Heading */}
                          <Reveal delay={200}>
-                              <h2 className="text-4xl md:text-6xl font-black leading-tight mb-8 md:mb-12">
+                              <h2 className="mb-8 text-4xl font-black leading-tight text-black md:mb-12 md:text-6xl">
                                    You Ask, We Answer
                               </h2>
                          </Reveal>
@@ -106,7 +106,7 @@ export default function DroneFAQ() {
                                         className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-40 mt-4" : "max-h-0"
                                              }`}
                                    >
-                                        <p className="text-gray-600 pl-14">
+                                        <p className="text-base leading-relaxed text-neutral-500 pl-12 sm:pl-14">
                                              {faq.answer}
                                         </p>
                                    </div>
