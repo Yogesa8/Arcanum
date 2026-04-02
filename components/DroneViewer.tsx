@@ -7,8 +7,8 @@ import { X } from "lucide-react";
 import { GLTF } from "three-stdlib";
 
 type GLTFResult = GLTF & {
-  nodes: any;
-  materials: any;
+  nodes: Record<string, unknown>;
+  materials: Record<string, unknown>;
 };
 
 interface DroneModelProps {

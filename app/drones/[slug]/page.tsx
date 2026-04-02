@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { drones } from "@/lib/drones";
 import DronePageView from "@/components/DronePageView";
+import ContactSection from "@/components/ContactSection";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -16,7 +17,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <main className="min-h-screen">
-      <DronePageView drone={drone} />
+      <DronePageView drone={drone} />      
     </main>
   );
 }
