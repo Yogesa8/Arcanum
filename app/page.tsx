@@ -10,7 +10,6 @@ import ContactSection from "@/components/ContactSection";
 import TrustedBy from "@/components/TrustedBy";
 import DroneFAQ from "@/components/Faq";
 import Footer from "@/components/Footer";
-import ContactDetails from "@/components/ContactDetails";
 import MilitaryGallery from "@/components/MilitaryGallery";
 import DronesSection from "@/components/DronesSection";
 
@@ -32,7 +31,6 @@ export default function Home() {
           <ClientVoices />
           <DroneFAQ />
           <ContactSection />
-          <ContactDetails />
           <Footer />
         </div>
       </div>
