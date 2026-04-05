@@ -22,7 +22,7 @@ export default function ContactSection() {
     const formData = new FormData(form);
 
     setLoading(true);
-    formData.append("apiKey", "sf_c9cfc591d59aec40d6adb254");
+    formData.append("apiKey", "sf_f76f267de8c1f8ec5abe872c");
 
     try {
       const res = await fetch("https://api.staticforms.dev/submit", {
